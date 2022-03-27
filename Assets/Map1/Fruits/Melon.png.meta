@@ -1,60 +1,60 @@
 fileFormatVersion: 2
-guid: 1ddc9afd21fec77489b1248d18f31b68
+guid: 031678d507e557a41b7a16fc33bf6c39
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7293598183456022363
-    second: Apple_0
+      213: 3776312371561069292
+    second: Melon_0
   - first:
-      213: 3211865404380153573
-    second: Apple_1
+      213: 2611220147007439301
+    second: Melon_1
   - first:
-      213: 4808522734667448011
-    second: Apple_2
+      213: 2353208620542727372
+    second: Melon_2
   - first:
-      213: -8577097333041121892
-    second: Apple_3
+      213: 8821371696964291164
+    second: Melon_3
   - first:
-      213: 1419576285154770477
-    second: Apple_4
+      213: 8382193064667267037
+    second: Melon_4
   - first:
-      213: -7706788487438311687
-    second: Apple_5
+      213: -3288833518496767930
+    second: Melon_5
   - first:
-      213: 8638710384840876012
-    second: Apple_6
+      213: 4593711905992766363
+    second: Melon_6
   - first:
-      213: -4689406079702324653
-    second: Apple_7
+      213: -2703723749527953725
+    second: Melon_7
   - first:
-      213: -4804661220611782958
-    second: Apple_8
+      213: 4404175151357073704
+    second: Melon_8
   - first:
-      213: 542562350195365616
-    second: Apple_9
+      213: -4406734128596351014
+    second: Melon_9
   - first:
-      213: 1535906679059638393
-    second: Apple_10
+      213: -8731991674958125425
+    second: Melon_10
   - first:
-      213: -6207369124864647917
-    second: Apple_11
+      213: -7029448349843301362
+    second: Melon_11
   - first:
-      213: 7209791866757004406
-    second: Apple_12
+      213: -909351362157965132
+    second: Melon_12
   - first:
-      213: -1462588236305530756
-    second: Apple_13
+      213: 2938550379556323724
+    second: Melon_13
   - first:
-      213: 4023135878370671054
-    second: Apple_14
+      213: -1316238954007984859
+    second: Melon_14
   - first:
-      213: -337911150936919937
-    second: Apple_15
+      213: 2641464298146962395
+    second: Melon_15
   - first:
-      213: 9139289913481491577
-    second: Apple_16
+      213: 4074361457694701065
+    second: Melon_16
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -74,6 +74,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -83,8 +84,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -105,9 +106,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -137,7 +142,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Apple_0
+      name: Melon_0
       rect:
         serializedVersion: 2
         x: 0
@@ -151,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8a08d8fa27377c4a953e5166a4e378a
-      internalID: 7293598183456022363
+      spriteID: 4e49f999ea0bf3243864ff5b92b20f7c
+      internalID: 3776312371561069292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_1
+      name: Melon_1
       rect:
         serializedVersion: 2
         x: 32
@@ -172,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f02a7fa3ffeb30a4199e0351b4344f8f
-      internalID: 3211865404380153573
+      spriteID: cbca6add0b0af0d4fa098523afe80aa7
+      internalID: 2611220147007439301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_2
+      name: Melon_2
       rect:
         serializedVersion: 2
         x: 64
@@ -193,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06b3375f0ba8c0142b7aad447dbbbae3
-      internalID: 4808522734667448011
+      spriteID: 340f3ad2557eb91498e7f662d9e23241
+      internalID: 2353208620542727372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_3
+      name: Melon_3
       rect:
         serializedVersion: 2
         x: 96
@@ -214,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 960f1f000bcb718488f0325a35b894a1
-      internalID: -8577097333041121892
+      spriteID: 72e3645b217b9f44080b83755cbd5b3a
+      internalID: 8821371696964291164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_4
+      name: Melon_4
       rect:
         serializedVersion: 2
         x: 128
@@ -235,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37de86aa0dcf0a948ae6dd77bbbd73d9
-      internalID: 1419576285154770477
+      spriteID: 1aa467f5196b19443855ea3a96e5714d
+      internalID: 8382193064667267037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_5
+      name: Melon_5
       rect:
         serializedVersion: 2
         x: 160
@@ -256,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37705b0046b0cdb4f8be3391619ab868
-      internalID: -7706788487438311687
+      spriteID: fb09d128fddf0d4429ea274582abc154
+      internalID: -3288833518496767930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_6
+      name: Melon_6
       rect:
         serializedVersion: 2
         x: 192
@@ -277,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6944f29b9357660429c0802790c65fcb
-      internalID: 8638710384840876012
+      spriteID: 99fc725327dd9514a81dc53c08984d63
+      internalID: 4593711905992766363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_7
+      name: Melon_7
       rect:
         serializedVersion: 2
         x: 224
@@ -298,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3606c8283f75c0546bb0e1041976d1d6
-      internalID: -4689406079702324653
+      spriteID: 209ee70953d3275448d68a5f9e4120dd
+      internalID: -2703723749527953725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_8
+      name: Melon_8
       rect:
         serializedVersion: 2
         x: 256
@@ -319,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1addb6c313dfe2f4a99b92c0a7e0b5e6
-      internalID: -4804661220611782958
+      spriteID: d07c9ac536c377c4a91dad71b3f60e05
+      internalID: 4404175151357073704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_9
+      name: Melon_9
       rect:
         serializedVersion: 2
         x: 288
@@ -340,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 945871b795429e44886b112764cf3d89
-      internalID: 542562350195365616
+      spriteID: 07c29928d2346ee41a4ec66c6e712a8c
+      internalID: -4406734128596351014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_10
+      name: Melon_10
       rect:
         serializedVersion: 2
         x: 320
@@ -361,14 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 454305dfe8422c24dbf414b73bb7af7c
-      internalID: 1535906679059638393
+      spriteID: b25ec4f67ba9a5b459ad1786adf8347c
+      internalID: -8731991674958125425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_11
+      name: Melon_11
       rect:
         serializedVersion: 2
         x: 352
@@ -382,14 +387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dae896e063923c24fa64acad79e2d19b
-      internalID: -6207369124864647917
+      spriteID: 0fa0664b832a9fc4eaaaac8dfdb539ee
+      internalID: -7029448349843301362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_12
+      name: Melon_12
       rect:
         serializedVersion: 2
         x: 384
@@ -403,14 +408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f6686c46dcdd1245804c5903fa45daa
-      internalID: 7209791866757004406
+      spriteID: a990a06277e8b574f9f05a744dfb9de3
+      internalID: -909351362157965132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_13
+      name: Melon_13
       rect:
         serializedVersion: 2
         x: 416
@@ -424,14 +429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2d678a7f900dbf4dab4f5f0eed8a0d9
-      internalID: -1462588236305530756
+      spriteID: 41860e8d6bdf6fb4e80ae5534d2f4e81
+      internalID: 2938550379556323724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_14
+      name: Melon_14
       rect:
         serializedVersion: 2
         x: 448
@@ -445,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0455f04e92d89db4cbe14eeed5e6a856
-      internalID: 4023135878370671054
+      spriteID: 0ed08bd21a9ed6b4f9362e96422fcf90
+      internalID: -1316238954007984859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_15
+      name: Melon_15
       rect:
         serializedVersion: 2
         x: 480
@@ -466,14 +471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48ed5cdde0c68304fa1241c934611c5d
-      internalID: -337911150936919937
+      spriteID: f1d1d9f238832964e949a70245d6d927
+      internalID: 2641464298146962395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Apple_16
+      name: Melon_16
       rect:
         serializedVersion: 2
         x: 512
@@ -487,8 +492,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab2a044731e611b40bfe5447aa3bc978
-      internalID: 9139289913481491577
+      spriteID: 0f8d13ef6eb99424ca17aeda465ea8c8
+      internalID: 4074361457694701065
       vertices: []
       indices: 
       edges: []

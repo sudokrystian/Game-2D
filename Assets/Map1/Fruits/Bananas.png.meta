@@ -1,60 +1,60 @@
 fileFormatVersion: 2
-guid: 5100b75572e484e458e4340e2afe9454
+guid: b1f24b3bc2e2f1d4b858657ad5c115a0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4138223980208024357
-    second: Kiwi_0
+      213: -5728686177044832811
+    second: Bananas_0
   - first:
-      213: 4027297436301884547
-    second: Kiwi_1
+      213: -5786164333596270976
+    second: Bananas_1
   - first:
-      213: 7839148961451991454
-    second: Kiwi_2
+      213: 5546440197654754675
+    second: Bananas_2
   - first:
-      213: -730248880921602624
-    second: Kiwi_3
+      213: -716424211456008518
+    second: Bananas_3
   - first:
-      213: -2773199153295840776
-    second: Kiwi_4
+      213: -5292413800997781641
+    second: Bananas_4
   - first:
-      213: 433390274577684119
-    second: Kiwi_5
+      213: -7253148436187668049
+    second: Bananas_5
   - first:
-      213: -4823085682731260845
-    second: Kiwi_6
+      213: 8575041284972176386
+    second: Bananas_6
   - first:
-      213: 3686063136471726221
-    second: Kiwi_7
+      213: 3604655966176598788
+    second: Bananas_7
   - first:
-      213: 7554967952476731917
-    second: Kiwi_8
+      213: -6630629338061711003
+    second: Bananas_8
   - first:
-      213: -2447911064218208986
-    second: Kiwi_9
+      213: -8491821694155768140
+    second: Bananas_9
   - first:
-      213: 1065612581672122212
-    second: Kiwi_10
+      213: 8303107455315256833
+    second: Bananas_10
   - first:
-      213: -3489895863418248697
-    second: Kiwi_11
+      213: -7266015010218627371
+    second: Bananas_11
   - first:
-      213: 1055780198316226049
-    second: Kiwi_12
+      213: -5455066603935629110
+    second: Bananas_12
   - first:
-      213: 6147472920748202901
-    second: Kiwi_13
+      213: -1347183766120132532
+    second: Bananas_13
   - first:
-      213: 4395527864148419765
-    second: Kiwi_14
+      213: 3310116166248368309
+    second: Bananas_14
   - first:
-      213: -3046725879948077466
-    second: Kiwi_15
+      213: 7601917565207802943
+    second: Bananas_15
   - first:
-      213: -6983844126893656030
-    second: Kiwi_16
+      213: -8288679156529735154
+    second: Bananas_16
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -74,6 +74,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -83,8 +84,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -105,9 +106,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -137,7 +142,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kiwi_0
+      name: Bananas_0
       rect:
         serializedVersion: 2
         x: 0
@@ -151,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b71817b1f78b8b428ea9187a4a49f06
-      internalID: 4138223980208024357
+      spriteID: 6ca23518b492cf744a336833121ee22c
+      internalID: -5728686177044832811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_1
+      name: Bananas_1
       rect:
         serializedVersion: 2
         x: 32
@@ -172,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea603bd7cbffe454988be6be04803905
-      internalID: 4027297436301884547
+      spriteID: 73680ae4d6de91448999314e00c6798d
+      internalID: -5786164333596270976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_2
+      name: Bananas_2
       rect:
         serializedVersion: 2
         x: 64
@@ -193,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 040f35029ac419c4eb654b60408395fc
-      internalID: 7839148961451991454
+      spriteID: 96ca4fcac6d13b34fb8a70f1bb5f1041
+      internalID: 5546440197654754675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_3
+      name: Bananas_3
       rect:
         serializedVersion: 2
         x: 96
@@ -214,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be8df7570c86ba54baa9c5e9afc38946
-      internalID: -730248880921602624
+      spriteID: a8cdb555fdf0bbc419fddd3d4777ef98
+      internalID: -716424211456008518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_4
+      name: Bananas_4
       rect:
         serializedVersion: 2
         x: 128
@@ -235,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b121ccaa328d124f90c6d6e84e18958
-      internalID: -2773199153295840776
+      spriteID: 0b429e257e0c0bf44b14a4748639d562
+      internalID: -5292413800997781641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_5
+      name: Bananas_5
       rect:
         serializedVersion: 2
         x: 160
@@ -256,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27b4655cc29a57346bb7e0efedf5ece7
-      internalID: 433390274577684119
+      spriteID: c22e41c025853bf48ae24fc1797dd514
+      internalID: -7253148436187668049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_6
+      name: Bananas_6
       rect:
         serializedVersion: 2
         x: 192
@@ -277,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0299ef9e1d4c7bd4982f2cf7721ece14
-      internalID: -4823085682731260845
+      spriteID: f504a9a73fc426a439f26a4dc407e100
+      internalID: 8575041284972176386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_7
+      name: Bananas_7
       rect:
         serializedVersion: 2
         x: 224
@@ -298,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8288086eae7ebae43aafa9e4041fe615
-      internalID: 3686063136471726221
+      spriteID: b0144ab7eab88db4e887af2a9a82dacd
+      internalID: 3604655966176598788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_8
+      name: Bananas_8
       rect:
         serializedVersion: 2
         x: 256
@@ -319,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 795d83e8a6d8ad6438b67af420de2f55
-      internalID: 7554967952476731917
+      spriteID: 9a29bdd66638a744b8967d48a8664a72
+      internalID: -6630629338061711003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_9
+      name: Bananas_9
       rect:
         serializedVersion: 2
         x: 288
@@ -340,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6bb1ad4b2c01a547b2beca34ce93358
-      internalID: -2447911064218208986
+      spriteID: 5768a9950ba56094f86a82b4bd38823a
+      internalID: -8491821694155768140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_10
+      name: Bananas_10
       rect:
         serializedVersion: 2
         x: 320
@@ -361,14 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0515b703b5aa5b64c9d576811738af50
-      internalID: 1065612581672122212
+      spriteID: 0a64a01fc99b4384d9119ed9cc2e56d9
+      internalID: 8303107455315256833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_11
+      name: Bananas_11
       rect:
         serializedVersion: 2
         x: 352
@@ -382,14 +387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7d6213cb8535b34ca815fe893b08dd6
-      internalID: -3489895863418248697
+      spriteID: d6631b85380068847b5b047b88fc1a8b
+      internalID: -7266015010218627371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_12
+      name: Bananas_12
       rect:
         serializedVersion: 2
         x: 384
@@ -403,14 +408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf58d0bf1d714d54880ed496947a97e2
-      internalID: 1055780198316226049
+      spriteID: 715f91e4dbbbcac4c8496a1396459f29
+      internalID: -5455066603935629110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_13
+      name: Bananas_13
       rect:
         serializedVersion: 2
         x: 416
@@ -424,14 +429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adf669cad86a9624b86777a25054df67
-      internalID: 6147472920748202901
+      spriteID: 9b7664d443bb64e46bc62bcd30e9b676
+      internalID: -1347183766120132532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_14
+      name: Bananas_14
       rect:
         serializedVersion: 2
         x: 448
@@ -445,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42b370def06565f4493a538d83ddb0d0
-      internalID: 4395527864148419765
+      spriteID: 1d0a1ee67e2604b4ca338f03579ae268
+      internalID: 3310116166248368309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_15
+      name: Bananas_15
       rect:
         serializedVersion: 2
         x: 480
@@ -466,14 +471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a25ef46a6eebfe428bbc0f03db1ee1f
-      internalID: -3046725879948077466
+      spriteID: 171254829e51aaa4695b59b6df9a4085
+      internalID: 7601917565207802943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kiwi_16
+      name: Bananas_16
       rect:
         serializedVersion: 2
         x: 512
@@ -487,8 +492,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21bda4800db846b4aba4643ead3e3657
-      internalID: -6983844126893656030
+      spriteID: 52e1f03f353d6d047985661e75ee9479
+      internalID: -8288679156529735154
       vertices: []
       indices: 
       edges: []

@@ -30,10 +30,6 @@ public class EnemyBehaviour : MonoBehaviour
         {
             player.TakeHit(EnemyDamage);
         }
-
-   
-        print("kurwa: " + rigidBody.velocity.x);
-
         // transform.position += new Vector3(-horizontalMove, 0, 0) * Time.deltaTime * 10;
     }
 

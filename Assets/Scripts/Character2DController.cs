@@ -8,12 +8,12 @@ public class Character2DController : MonoBehaviour
 {
     // Game Controller
     [SerializeField] private GameController GameController;
-    
+
     // Player body
     private Rigidbody2D rigidBody;
     [SerializeField] private HealthBar HealthBar;
 
-    
+
     // Player actions
     private float horizontalMove = 0;
     private bool jump = false;
@@ -24,7 +24,7 @@ public class Character2DController : MonoBehaviour
     [SerializeField] private float MovementSpeed = 4f;
     [SerializeField] private float JumpForce = 6f;
     private float Hitpoints;
-    
+
     //Bullets
     [SerializeField] private ProjectileBehaviour ProjectilePrefab;
     [SerializeField] private Transform LaunchOffset;
@@ -46,7 +46,7 @@ public class Character2DController : MonoBehaviour
     {
         PerformActions();
     }
-    
+
     public void TakeHit(float damage)
     {
         Hitpoints -= damage;
@@ -56,7 +56,25 @@ public class Character2DController : MonoBehaviour
             GameController.GameOver();
         }
     }
-    
+
+    public void AddHealth(float extraHealth)
+    {
+        if (Hitpoints != PlayerMaxHealth)
+        {
+            if ((Hitpoints + extraHealth) > PlayerMaxHealth)
+            {
+                Hitpoints = PlayerMaxHealth;
+                HealthBar.SetHealth(Hitpoints);
+            }
+            else
+            {
+                Hitpoints += extraHealth;
+                HealthBar.SetHealth(Hitpoints);
+            }
+        }
+
+    }
+
     private void SaveActions()
     {
         float horizontalMove = Input.GetAxisRaw("Horizontal");
@@ -78,13 +96,10 @@ public class Character2DController : MonoBehaviour
 
         if (horizontalMove < 0)
         {
-            // transform.rotation = Quaternion.Euler(0, 0, 0);
             transform.rotation = Quaternion.identity;
-            // transform.Rotate(0f,0f,0f);
         } else if (horizontalMove > 0)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
-            // transform.Rotate(0f,180f,0f);
         }
 
         if (jump)
@@ -95,10 +110,7 @@ public class Character2DController : MonoBehaviour
 
         if (shoot)
         {
-            print("Shooting the bullet!");
             Instantiate(ProjectilePrefab, LaunchOffset.position, Quaternion.Inverse(transform.rotation));
-            // Instantiate(, LaunchOffset.position, transform.rotation);
-
             shoot = false;
         }
     }

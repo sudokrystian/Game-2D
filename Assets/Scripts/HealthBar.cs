@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,13 +12,7 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Gradient Gradient;
 
     [SerializeField] private Image Fill;
-    // [SerializeField] private Vector3 Offset;
     
-    void Update()
-    {
-        // Slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + Offset);
-    }
-
     public void SetHealth(float health)
     {
         Slider.value = health;

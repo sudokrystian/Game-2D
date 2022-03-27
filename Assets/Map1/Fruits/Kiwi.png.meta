@@ -1,60 +1,60 @@
 fileFormatVersion: 2
-guid: 031678d507e557a41b7a16fc33bf6c39
+guid: 5100b75572e484e458e4340e2afe9454
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3776312371561069292
-    second: Melon_0
+      213: 4138223980208024357
+    second: Kiwi_0
   - first:
-      213: 2611220147007439301
-    second: Melon_1
+      213: 4027297436301884547
+    second: Kiwi_1
   - first:
-      213: 2353208620542727372
-    second: Melon_2
+      213: 7839148961451991454
+    second: Kiwi_2
   - first:
-      213: 8821371696964291164
-    second: Melon_3
+      213: -730248880921602624
+    second: Kiwi_3
   - first:
-      213: 8382193064667267037
-    second: Melon_4
+      213: -2773199153295840776
+    second: Kiwi_4
   - first:
-      213: -3288833518496767930
-    second: Melon_5
+      213: 433390274577684119
+    second: Kiwi_5
   - first:
-      213: 4593711905992766363
-    second: Melon_6
+      213: -4823085682731260845
+    second: Kiwi_6
   - first:
-      213: -2703723749527953725
-    second: Melon_7
+      213: 3686063136471726221
+    second: Kiwi_7
   - first:
-      213: 4404175151357073704
-    second: Melon_8
+      213: 7554967952476731917
+    second: Kiwi_8
   - first:
-      213: -4406734128596351014
-    second: Melon_9
+      213: -2447911064218208986
+    second: Kiwi_9
   - first:
-      213: -8731991674958125425
-    second: Melon_10
+      213: 1065612581672122212
+    second: Kiwi_10
   - first:
-      213: -7029448349843301362
-    second: Melon_11
+      213: -3489895863418248697
+    second: Kiwi_11
   - first:
-      213: -909351362157965132
-    second: Melon_12
+      213: 1055780198316226049
+    second: Kiwi_12
   - first:
-      213: 2938550379556323724
-    second: Melon_13
+      213: 6147472920748202901
+    second: Kiwi_13
   - first:
-      213: -1316238954007984859
-    second: Melon_14
+      213: 4395527864148419765
+    second: Kiwi_14
   - first:
-      213: 2641464298146962395
-    second: Melon_15
+      213: -3046725879948077466
+    second: Kiwi_15
   - first:
-      213: 4074361457694701065
-    second: Melon_16
+      213: -6983844126893656030
+    second: Kiwi_16
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -74,6 +74,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -83,8 +84,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -105,9 +106,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -137,7 +142,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Melon_0
+      name: Kiwi_0
       rect:
         serializedVersion: 2
         x: 0
@@ -151,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e49f999ea0bf3243864ff5b92b20f7c
-      internalID: 3776312371561069292
+      spriteID: 1b71817b1f78b8b428ea9187a4a49f06
+      internalID: 4138223980208024357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_1
+      name: Kiwi_1
       rect:
         serializedVersion: 2
         x: 32
@@ -172,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbca6add0b0af0d4fa098523afe80aa7
-      internalID: 2611220147007439301
+      spriteID: ea603bd7cbffe454988be6be04803905
+      internalID: 4027297436301884547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_2
+      name: Kiwi_2
       rect:
         serializedVersion: 2
         x: 64
@@ -193,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 340f3ad2557eb91498e7f662d9e23241
-      internalID: 2353208620542727372
+      spriteID: 040f35029ac419c4eb654b60408395fc
+      internalID: 7839148961451991454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_3
+      name: Kiwi_3
       rect:
         serializedVersion: 2
         x: 96
@@ -214,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72e3645b217b9f44080b83755cbd5b3a
-      internalID: 8821371696964291164
+      spriteID: be8df7570c86ba54baa9c5e9afc38946
+      internalID: -730248880921602624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_4
+      name: Kiwi_4
       rect:
         serializedVersion: 2
         x: 128
@@ -235,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1aa467f5196b19443855ea3a96e5714d
-      internalID: 8382193064667267037
+      spriteID: 7b121ccaa328d124f90c6d6e84e18958
+      internalID: -2773199153295840776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_5
+      name: Kiwi_5
       rect:
         serializedVersion: 2
         x: 160
@@ -256,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb09d128fddf0d4429ea274582abc154
-      internalID: -3288833518496767930
+      spriteID: 27b4655cc29a57346bb7e0efedf5ece7
+      internalID: 433390274577684119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_6
+      name: Kiwi_6
       rect:
         serializedVersion: 2
         x: 192
@@ -277,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99fc725327dd9514a81dc53c08984d63
-      internalID: 4593711905992766363
+      spriteID: 0299ef9e1d4c7bd4982f2cf7721ece14
+      internalID: -4823085682731260845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_7
+      name: Kiwi_7
       rect:
         serializedVersion: 2
         x: 224
@@ -298,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 209ee70953d3275448d68a5f9e4120dd
-      internalID: -2703723749527953725
+      spriteID: 8288086eae7ebae43aafa9e4041fe615
+      internalID: 3686063136471726221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_8
+      name: Kiwi_8
       rect:
         serializedVersion: 2
         x: 256
@@ -319,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d07c9ac536c377c4a91dad71b3f60e05
-      internalID: 4404175151357073704
+      spriteID: 795d83e8a6d8ad6438b67af420de2f55
+      internalID: 7554967952476731917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_9
+      name: Kiwi_9
       rect:
         serializedVersion: 2
         x: 288
@@ -340,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07c29928d2346ee41a4ec66c6e712a8c
-      internalID: -4406734128596351014
+      spriteID: d6bb1ad4b2c01a547b2beca34ce93358
+      internalID: -2447911064218208986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_10
+      name: Kiwi_10
       rect:
         serializedVersion: 2
         x: 320
@@ -361,14 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b25ec4f67ba9a5b459ad1786adf8347c
-      internalID: -8731991674958125425
+      spriteID: 0515b703b5aa5b64c9d576811738af50
+      internalID: 1065612581672122212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_11
+      name: Kiwi_11
       rect:
         serializedVersion: 2
         x: 352
@@ -382,14 +387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fa0664b832a9fc4eaaaac8dfdb539ee
-      internalID: -7029448349843301362
+      spriteID: d7d6213cb8535b34ca815fe893b08dd6
+      internalID: -3489895863418248697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_12
+      name: Kiwi_12
       rect:
         serializedVersion: 2
         x: 384
@@ -403,14 +408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a990a06277e8b574f9f05a744dfb9de3
-      internalID: -909351362157965132
+      spriteID: cf58d0bf1d714d54880ed496947a97e2
+      internalID: 1055780198316226049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_13
+      name: Kiwi_13
       rect:
         serializedVersion: 2
         x: 416
@@ -424,14 +429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41860e8d6bdf6fb4e80ae5534d2f4e81
-      internalID: 2938550379556323724
+      spriteID: adf669cad86a9624b86777a25054df67
+      internalID: 6147472920748202901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_14
+      name: Kiwi_14
       rect:
         serializedVersion: 2
         x: 448
@@ -445,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ed08bd21a9ed6b4f9362e96422fcf90
-      internalID: -1316238954007984859
+      spriteID: 42b370def06565f4493a538d83ddb0d0
+      internalID: 4395527864148419765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_15
+      name: Kiwi_15
       rect:
         serializedVersion: 2
         x: 480
@@ -466,14 +471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1d1d9f238832964e949a70245d6d927
-      internalID: 2641464298146962395
+      spriteID: 5a25ef46a6eebfe428bbc0f03db1ee1f
+      internalID: -3046725879948077466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melon_16
+      name: Kiwi_16
       rect:
         serializedVersion: 2
         x: 512
@@ -487,8 +492,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f8d13ef6eb99424ca17aeda465ea8c8
-      internalID: 4074361457694701065
+      spriteID: 21bda4800db846b4aba4643ead3e3657
+      internalID: -6983844126893656030
       vertices: []
       indices: 
       edges: []

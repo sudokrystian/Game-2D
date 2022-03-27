@@ -1,60 +1,60 @@
 fileFormatVersion: 2
-guid: b1f24b3bc2e2f1d4b858657ad5c115a0
+guid: ffc9f271fad56c243a45f100b9dc6778
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5728686177044832811
-    second: Bananas_0
+      213: 4121880872312635667
+    second: Orange_0
   - first:
-      213: -5786164333596270976
-    second: Bananas_1
+      213: 2344270669467322306
+    second: Orange_1
   - first:
-      213: 5546440197654754675
-    second: Bananas_2
+      213: 4308106298786891140
+    second: Orange_2
   - first:
-      213: -716424211456008518
-    second: Bananas_3
+      213: 7874291611447793305
+    second: Orange_3
   - first:
-      213: -5292413800997781641
-    second: Bananas_4
+      213: 3285381865569172166
+    second: Orange_4
   - first:
-      213: -7253148436187668049
-    second: Bananas_5
+      213: 7043855894265817204
+    second: Orange_5
   - first:
-      213: 8575041284972176386
-    second: Bananas_6
+      213: 3988426822137034836
+    second: Orange_6
   - first:
-      213: 3604655966176598788
-    second: Bananas_7
+      213: -2229105888306426895
+    second: Orange_7
   - first:
-      213: -6630629338061711003
-    second: Bananas_8
+      213: 6008893271325792001
+    second: Orange_8
   - first:
-      213: -8491821694155768140
-    second: Bananas_9
+      213: -7876212812653781381
+    second: Orange_9
   - first:
-      213: 8303107455315256833
-    second: Bananas_10
+      213: 3515071814446350068
+    second: Orange_10
   - first:
-      213: -7266015010218627371
-    second: Bananas_11
+      213: -7989559414504384385
+    second: Orange_11
   - first:
-      213: -5455066603935629110
-    second: Bananas_12
+      213: -5807639670500276790
+    second: Orange_12
   - first:
-      213: -1347183766120132532
-    second: Bananas_13
+      213: 6847284126642719973
+    second: Orange_13
   - first:
-      213: 3310116166248368309
-    second: Bananas_14
+      213: -7248848098583867319
+    second: Orange_14
   - first:
-      213: 7601917565207802943
-    second: Bananas_15
+      213: 4913402539735777752
+    second: Orange_15
   - first:
-      213: -8288679156529735154
-    second: Bananas_16
+      213: -3526668604636205124
+    second: Orange_16
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -74,6 +74,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -83,8 +84,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -105,9 +106,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -137,7 +142,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bananas_0
+      name: Orange_0
       rect:
         serializedVersion: 2
         x: 0
@@ -151,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ca23518b492cf744a336833121ee22c
-      internalID: -5728686177044832811
+      spriteID: 55143e6280f536849b6658c969386ccc
+      internalID: 4121880872312635667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_1
+      name: Orange_1
       rect:
         serializedVersion: 2
         x: 32
@@ -172,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73680ae4d6de91448999314e00c6798d
-      internalID: -5786164333596270976
+      spriteID: ab25a43d098bdae499a36607f6c7c685
+      internalID: 2344270669467322306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_2
+      name: Orange_2
       rect:
         serializedVersion: 2
         x: 64
@@ -193,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96ca4fcac6d13b34fb8a70f1bb5f1041
-      internalID: 5546440197654754675
+      spriteID: a00eb127219f7d14fb4482572c1616d7
+      internalID: 4308106298786891140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_3
+      name: Orange_3
       rect:
         serializedVersion: 2
         x: 96
@@ -214,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8cdb555fdf0bbc419fddd3d4777ef98
-      internalID: -716424211456008518
+      spriteID: 9e5a1d552929d5443b825137029a7b35
+      internalID: 7874291611447793305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_4
+      name: Orange_4
       rect:
         serializedVersion: 2
         x: 128
@@ -235,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b429e257e0c0bf44b14a4748639d562
-      internalID: -5292413800997781641
+      spriteID: 123bf90c47274714e91f003fff738ad1
+      internalID: 3285381865569172166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_5
+      name: Orange_5
       rect:
         serializedVersion: 2
         x: 160
@@ -256,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c22e41c025853bf48ae24fc1797dd514
-      internalID: -7253148436187668049
+      spriteID: 65955cada2a93b946a7a909c6d2d0e09
+      internalID: 7043855894265817204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_6
+      name: Orange_6
       rect:
         serializedVersion: 2
         x: 192
@@ -277,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f504a9a73fc426a439f26a4dc407e100
-      internalID: 8575041284972176386
+      spriteID: 899c68a99c5566442bf5d749647e2749
+      internalID: 3988426822137034836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_7
+      name: Orange_7
       rect:
         serializedVersion: 2
         x: 224
@@ -298,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0144ab7eab88db4e887af2a9a82dacd
-      internalID: 3604655966176598788
+      spriteID: 75d65e7d97efc2c4da13fbe2e84163e0
+      internalID: -2229105888306426895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_8
+      name: Orange_8
       rect:
         serializedVersion: 2
         x: 256
@@ -319,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a29bdd66638a744b8967d48a8664a72
-      internalID: -6630629338061711003
+      spriteID: db799e54d75cb74479c7843de3a9ed77
+      internalID: 6008893271325792001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_9
+      name: Orange_9
       rect:
         serializedVersion: 2
         x: 288
@@ -340,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5768a9950ba56094f86a82b4bd38823a
-      internalID: -8491821694155768140
+      spriteID: 70df20ac49f141341b8cc02b9d6161db
+      internalID: -7876212812653781381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_10
+      name: Orange_10
       rect:
         serializedVersion: 2
         x: 320
@@ -361,14 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a64a01fc99b4384d9119ed9cc2e56d9
-      internalID: 8303107455315256833
+      spriteID: 782faec4bc7078a4d968eea55b5251d5
+      internalID: 3515071814446350068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_11
+      name: Orange_11
       rect:
         serializedVersion: 2
         x: 352
@@ -382,14 +387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6631b85380068847b5b047b88fc1a8b
-      internalID: -7266015010218627371
+      spriteID: 4fe5d58cb5a47254b89bc3cf75c404ce
+      internalID: -7989559414504384385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_12
+      name: Orange_12
       rect:
         serializedVersion: 2
         x: 384
@@ -403,14 +408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 715f91e4dbbbcac4c8496a1396459f29
-      internalID: -5455066603935629110
+      spriteID: 43c5b826505ec084899c0e80b3ad2ae8
+      internalID: -5807639670500276790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_13
+      name: Orange_13
       rect:
         serializedVersion: 2
         x: 416
@@ -424,14 +429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b7664d443bb64e46bc62bcd30e9b676
-      internalID: -1347183766120132532
+      spriteID: 95ea884470ab0b046ac1f4b2c8dbe037
+      internalID: 6847284126642719973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_14
+      name: Orange_14
       rect:
         serializedVersion: 2
         x: 448
@@ -445,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d0a1ee67e2604b4ca338f03579ae268
-      internalID: 3310116166248368309
+      spriteID: 0cd04943bc22e484f96a38e3dfb6a8b1
+      internalID: -7248848098583867319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_15
+      name: Orange_15
       rect:
         serializedVersion: 2
         x: 480
@@ -466,14 +471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 171254829e51aaa4695b59b6df9a4085
-      internalID: 7601917565207802943
+      spriteID: a8f75c9623b3fb14bad5d36124aba4c8
+      internalID: 4913402539735777752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bananas_16
+      name: Orange_16
       rect:
         serializedVersion: 2
         x: 512
@@ -487,8 +492,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52e1f03f353d6d047985661e75ee9479
-      internalID: -8288679156529735154
+      spriteID: f7c445767bc6e854692fa2bbc0f17c92
+      internalID: -3526668604636205124
       vertices: []
       indices: 
       edges: []

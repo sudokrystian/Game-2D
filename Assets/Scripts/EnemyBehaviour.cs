@@ -12,9 +12,11 @@ public class EnemyBehaviour : MonoBehaviour
     public GameObject bloodPrefab;
     [SerializeField] private HealthBar HealthBar;
     // Enemy stats
-    [SerializeField] private float EnemySpeed = 350f;
+    [SerializeField] private float EnemySpeed = 250f;
     [SerializeField] private float EnemyMaxHealth = 5;
     [SerializeField] private float EnemyDamage = 1;
+    // How far before the enemy can see the player
+    [SerializeField] private float VisionRange = 8;
     private float Hitpoints;
     // Collision info
     private float timeColliding = 0;
@@ -90,8 +92,12 @@ public class EnemyBehaviour : MonoBehaviour
         // Get the direction and force to move
         Vector2 direction = ((Vector2) path.vectorPath[currentWaypoint] - (Vector2) rigidBody.position).normalized;
         Vector2 force = direction * EnemySpeed * Time.deltaTime;
-        // Move the enemy
-        rigidBody.AddForce(force);
+        // Move the enemy if he is in range
+        float distanceFromPlayer = Vector2.Distance(rigidBody.position, target.position);
+        if (distanceFromPlayer < VisionRange)
+        {
+            rigidBody.AddForce(force);
+        }
         
         float distance = Vector2.Distance(rigidBody.position, path.vectorPath[currentWaypoint]);
         if (distance < nextWaypointDistance)

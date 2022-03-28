@@ -22,7 +22,7 @@ public class Character2DController : MonoBehaviour
     // Player base stats
     [SerializeField] private float PlayerMaxHealth = 8;
     [SerializeField] private float MovementSpeed = 4f;
-    [SerializeField] private float JumpForce = 6f;
+    [SerializeField] private float JumpForce = 7f;
     private float Hitpoints;
 
     //Bullets

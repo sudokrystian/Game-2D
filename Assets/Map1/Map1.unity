@@ -2453,6 +2453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb3f31e64b44d1b864f506e04a1a177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
   HealthBar: {fileID: 1061342621}
   EnemySpeed: 1
   EnemyMaxHealth: 5
@@ -3848,10 +3849,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Hit
+  - name: Theme
+    clip: {fileID: 8300000, guid: 398700eadf541204297be40d872c7d63, type: 3}
+    volume: 0.572
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: BulletHit
     clip: {fileID: 8300000, guid: 4143bb7f7f41f1344a1b48316f059a2c, type: 3}
-    volume: 0.914
-    pitch: 0.568
+    volume: 1
+    pitch: 1
     audioSource: {fileID: 0}
 --- !u!4 &1660638394
 Transform:
@@ -3899,7 +3905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97357c0eea788214f8ecc1918427ca2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameController: {fileID: 0}
+  GameController: {fileID: 1857318787}
   HealthBar: {fileID: 717515288}
   PlayerMaxHealth: 5
   MovementSpeed: 4
@@ -4069,7 +4075,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1857318788}
   - component: {fileID: 1857318787}
-  - component: {fileID: 1857318789}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4106,102 +4111,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1857318789
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857318786}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 398700eadf541204297be40d872c7d63, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1976147288
 GameObject:
   m_ObjectHideFlags: 0

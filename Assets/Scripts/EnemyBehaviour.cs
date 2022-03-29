@@ -9,7 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
     // Enemy components
     private Rigidbody2D rigidBody;
     public Transform enemyGFX;
-    public GameObject bloodPrefab;
+    // public GameObject bloodPrefab;
     [SerializeField] private HealthBar HealthBar;
     // Enemy stats
     [SerializeField] private float EnemySpeed = 250f;
@@ -24,7 +24,7 @@ public class EnemyBehaviour : MonoBehaviour
     private float timeThreshold = 0.5f;
     // Target for AI
     public Transform target;
-    public float nextWaypointDistance = 3f;
+    public float nextWaypointDistance = 1f;
 
     private Path path;
     private int currentWaypoint = 0;
@@ -105,12 +105,20 @@ public class EnemyBehaviour : MonoBehaviour
             currentWaypoint++;
         }
         // Rotate the enemy accordingly
+        // if (force.x >= 0.01f)
+        // {
+        //     enemyGFX.localScale = new Vector3(-enemyGFX.localScale.x, enemyGFX.localScale.y, enemyGFX.localScale.z);
+        // } else if (force.x <= -0.01f)
+        // {
+        //     enemyGFX.localScale = new Vector3(enemyGFX.localScale.x, enemyGFX.localScale.y, enemyGFX.localScale.z);
+        // }
         if (force.x >= 0.01f)
         {
-            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+            enemyGFX.transform.rotation = Quaternion.Euler(0, 180, 0);
+
         } else if (force.x <= -0.01f)
         {
-            enemyGFX.localScale = new Vector3(1f, 1f, 1f);
+            enemyGFX.transform.rotation = Quaternion.identity;
         }
     }
 
@@ -134,7 +142,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void TakeHit(float damage)
     {
-        Instantiate(bloodPrefab, gameObject.transform.position, gameObject.transform.rotation);
+        // Instantiate(bloodPrefab, gameObject.transform.position, gameObject.transform.rotation);
         FindObjectOfType<AudioManager>().Play("BulletHit");
         Hitpoints -= damage;
         HealthBar.SetHealth(Hitpoints);

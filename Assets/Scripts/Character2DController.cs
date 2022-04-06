@@ -12,6 +12,7 @@ public class Character2DController : MonoBehaviour
     // Player body
     private Rigidbody2D rigidBody;
     [SerializeField] private HealthBar HealthBar;
+    [SerializeField] private GameObject playerGFX;
 
 
     // Player actions
@@ -28,13 +29,21 @@ public class Character2DController : MonoBehaviour
     //Bullets
     [SerializeField] private ProjectileBehaviour ProjectilePrefab;
     [SerializeField] private Transform LaunchOffset;
+    
+    // Animations
+    private Animator animator;
+    private readonly int speedHash = Animator.StringToHash("Speed");
+    private readonly int jumpHash = Animator.StringToHash("Jump");
+    private readonly int hitHash = Animator.StringToHash("Hit");
 
 
+    
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         HealthBar.SetMaxHealth(PlayerMaxHealth);
         Hitpoints = PlayerMaxHealth;
+        animator = playerGFX.GetComponent<Animator>();
     }
 
     private void Update()
@@ -51,6 +60,8 @@ public class Character2DController : MonoBehaviour
     {
         Hitpoints -= damage;
         HealthBar.SetHealth(Hitpoints);
+        // Animate being hit
+        animator.SetTrigger(hitHash);
         if (Hitpoints <= 0)
         {
             GameController.GameOver();
@@ -93,7 +104,17 @@ public class Character2DController : MonoBehaviour
     private void PerformActions()
     {
         transform.position += new Vector3(horizontalMove, 0, 0) * Time.deltaTime * MovementSpeed;
+        // Set the value for the animation
+        if (horizontalMove == 0)
+        {
+            animator.SetInteger(speedHash, 0);
+        }
+        else
+        {
+            animator.SetInteger(speedHash, 1);
 
+        }
+        
         if (horizontalMove < 0)
         {
             transform.rotation = Quaternion.identity;
@@ -106,6 +127,8 @@ public class Character2DController : MonoBehaviour
         {
             rigidBody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             this.jump = false;
+            // Jump animation
+            animator.SetTrigger(jumpHash);
         }
 
         if (shoot)

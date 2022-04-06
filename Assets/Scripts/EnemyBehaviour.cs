@@ -9,7 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
     // Enemy components
     private Rigidbody2D rigidBody;
     public Transform enemyGFX;
-    // public GameObject bloodPrefab;
+    public GameObject bloodPrefab;
     [SerializeField] private HealthBar HealthBar;
     // Enemy stats
     [SerializeField] private float EnemySpeed = 250f;
@@ -142,7 +142,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void TakeHit(float damage)
     {
-        // Instantiate(bloodPrefab, gameObject.transform.position, gameObject.transform.rotation);
+        var blood = Instantiate(bloodPrefab, rigidBody.transform.position, rigidBody.transform.rotation);
+        blood.GetComponent<ParticleSystem>().Play();
         FindObjectOfType<AudioManager>().Play("BulletHit");
         Hitpoints -= damage;
         HealthBar.SetHealth(Hitpoints);

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private Transform followObject;
     // Game over behaviour
     [SerializeField] private GameOverScreen GameOverScreen;
+    // Pop up windows
+    [SerializeField] private PopUpWindow popUpWindow;
     // Y offset of the camera
     [SerializeField] private float mainCameraYOffset = 4;
     
@@ -29,5 +32,10 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         GameOverScreen.Setup();
+    }
+
+    public void DamageUpPopUp()
+    {
+        popUpWindow.ActivatePopUp("Damage Up!");
     }
 }

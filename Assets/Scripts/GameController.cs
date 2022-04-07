@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    // Audio manager
+    [SerializeField] private AudioManager audioManager;
     // Camera behaviour
     [SerializeField] private Transform followObject;
     // Game over behaviour
@@ -36,6 +38,17 @@ public class GameController : MonoBehaviour
 
     public void DamageUpPopUp()
     {
+        audioManager.Play("DmgUp");
         popUpWindow.ActivatePopUp("Damage Up!");
+    }
+    
+    public void HealthRecoverPopUp() {
+        audioManager.Play("HealthRecover");
+        popUpWindow.ActivatePopUp("You feel more healthy");
+    }
+    
+    public void HealthUpPopUp() {
+        audioManager.Play("HealthUp");
+        popUpWindow.ActivatePopUp("Max HP increased!");
     }
 }

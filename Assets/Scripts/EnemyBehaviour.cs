@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -10,14 +11,14 @@ public class EnemyBehaviour : MonoBehaviour
     private Rigidbody2D rigidBody;
     public Transform enemyGFX;
     public GameObject bloodPrefab;
-    [SerializeField] private HealthBar HealthBar;
+    [SerializeField] private HealthBar healthBar;
     // Enemy stats
-    [SerializeField] private float EnemySpeed = 250f;
-    [SerializeField] private float EnemyMaxHealth = 5;
-    [SerializeField] private float EnemyDamage = 1;
+    [SerializeField] private float enemySpeed = 250f;
+    [SerializeField] private int enemyMaxHealth = 5;
+    [SerializeField] private int enemyDamage = 1;
     // How far before the enemy can see the player
-    [SerializeField] private float VisionRange = 8;
-    private float Hitpoints;
+    [SerializeField] private float visionRange = 8;
+    private int hitpoints;
     // Collision info
     private float timeColliding = 0;
     // Time before damage is taken
@@ -30,14 +31,21 @@ public class EnemyBehaviour : MonoBehaviour
     private int currentWaypoint = 0;
     private bool reachedEndOfPath = false;
     private Seeker seeker;
+
+    //Drops
+    public GameObject damageUpDrop;
+    [SerializeField] private float damageUpDropChance = 0.07f;
+    
+    public GameObject healthRecoveryDrop;
+    [SerializeField] private float healthRecoveryDropChance = 0.20f;
     
     
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
-        Hitpoints = EnemyMaxHealth;
-        HealthBar.SetMaxHealth(EnemyMaxHealth);
+        hitpoints = enemyMaxHealth;
+        healthBar.SetMaxHealth(enemyMaxHealth);
         InvokeRepeating("UpdatePath", 0f, 0.5f);
     }
 
@@ -51,7 +59,7 @@ public class EnemyBehaviour : MonoBehaviour
         var player = collision.collider.GetComponent<Character2DController>();
         if (player)
         {
-            player.TakeHit(EnemyDamage);
+            player.TakeHit(enemyDamage);
         }
     }
 
@@ -67,7 +75,7 @@ public class EnemyBehaviour : MonoBehaviour
             }
             else
             {
-                player.TakeHit(EnemyDamage);
+                player.TakeHit(enemyDamage);
                 timeColliding = 0f;
             }
         }
@@ -91,10 +99,10 @@ public class EnemyBehaviour : MonoBehaviour
         }
         // Get the direction and force to move
         Vector2 direction = ((Vector2) path.vectorPath[currentWaypoint] - (Vector2) rigidBody.position).normalized;
-        Vector2 force = direction * EnemySpeed * Time.deltaTime;
+        Vector2 force = direction * enemySpeed * Time.deltaTime;
         // Move the enemy if he is in range
         float distanceFromPlayer = Vector2.Distance(rigidBody.position, target.position);
-        if (distanceFromPlayer < VisionRange)
+        if (distanceFromPlayer < visionRange)
         {
             rigidBody.AddForce(force);
         }
@@ -140,15 +148,24 @@ public class EnemyBehaviour : MonoBehaviour
     }
     
 
-    public void TakeHit(float damage)
+    public void TakeHit(int damage)
     {
         var blood = Instantiate(bloodPrefab, rigidBody.transform.position, rigidBody.transform.rotation);
         blood.GetComponent<ParticleSystem>().Play();
         FindObjectOfType<AudioManager>().Play("BulletHit");
-        Hitpoints -= damage;
-        HealthBar.SetHealth(Hitpoints);
-        if (Hitpoints <= 0)
+        hitpoints -= damage;
+        healthBar.SetHealth(hitpoints);
+        if (hitpoints <= 0)
         {
+            // Random chance for drops
+            if (Random.value < damageUpDropChance)
+            {
+                Instantiate(damageUpDrop, gameObject.transform.position, Quaternion.Inverse(transform.rotation));
+            }
+            if (Random.value < healthRecoveryDropChance)
+            {
+                Instantiate(healthRecoveryDrop, gameObject.transform.position, Quaternion.Inverse(transform.rotation));
+            }
             Destroy(gameObject);
         }
     }

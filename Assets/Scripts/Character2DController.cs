@@ -8,6 +8,8 @@ public class Character2DController : MonoBehaviour
 {
     // Game Controller
     [SerializeField] private GameController gameController;
+    // Audio
+    [SerializeField] private AudioManager audioManager;
 
     // Player body
     private Rigidbody2D rigidBody;
@@ -21,10 +23,11 @@ public class Character2DController : MonoBehaviour
     private bool shoot = false;
 
     // Player base stats
-    [SerializeField] private float playerMaxHealth = 8;
+    [SerializeField] private int playerMaxHealth = 8;
     [SerializeField] private float movementSpeed = 4f;
     [SerializeField] private float jumpForce = 7f;
-    private float Hitpoints;
+    private int damage = 1;
+    private int hitpoints;
 
     //Bullets
     [SerializeField] private ProjectileBehaviour projectilePrefab;
@@ -42,7 +45,7 @@ public class Character2DController : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         healthBar.SetMaxHealth(playerMaxHealth);
-        Hitpoints = playerMaxHealth;
+        hitpoints = playerMaxHealth;
         animator = playerGFX.GetComponent<Animator>();
     }
 
@@ -56,34 +59,52 @@ public class Character2DController : MonoBehaviour
         PerformActions();
     }
 
-    public void TakeHit(float damage)
+    public void TakeHit(int damage)
     {
-        Hitpoints -= damage;
-        healthBar.SetHealth(Hitpoints);
+        hitpoints -= damage;
+        healthBar.SetHealth(hitpoints);
         // Animate being hit
         animator.SetTrigger(hitHash);
-        if (Hitpoints <= 0)
+        audioManager.Play("Hurt");
+        if (hitpoints <= 0)
         {
+            audioManager.Play("Death");
+            gameObject.SetActive(false);
             gameController.GameOver();
         }
     }
 
-    public void AddHealth(float extraHealth)
+    public void RecoverHealth(int extraHealth)
     {
-        if (Hitpoints != playerMaxHealth)
+        gameController.HealthRecoverPopUp();
+        if (hitpoints != playerMaxHealth)
         {
-            if ((Hitpoints + extraHealth) > playerMaxHealth)
+            if ((hitpoints + extraHealth) > playerMaxHealth)
             {
-                Hitpoints = playerMaxHealth;
-                healthBar.SetHealth(Hitpoints);
+                hitpoints = playerMaxHealth;
+                healthBar.SetHealth(hitpoints);
             }
             else
             {
-                Hitpoints += extraHealth;
-                healthBar.SetHealth(Hitpoints);
+                hitpoints += extraHealth;
+                healthBar.SetHealth(hitpoints);
             }
         }
+    }
 
+    public void IncreaseHealth(int extraHealth)
+    {
+        gameController.HealthUpPopUp();
+        playerMaxHealth += extraHealth;
+        hitpoints += extraHealth;
+        healthBar.SetMaxHealth(playerMaxHealth);
+        healthBar.SetHealth(hitpoints);
+    }
+    
+    public void IncreaseDamage()
+    {
+        gameController.DamageUpPopUp();
+        damage++;
     }
 
     private void SaveActions()
@@ -129,19 +150,16 @@ public class Character2DController : MonoBehaviour
             this.jump = false;
             // Jump animation
             animator.SetTrigger(jumpHash);
+            audioManager.Play("Jump");
+            audioManager.Play("Frog");
         }
 
         if (shoot)
         {
-            Instantiate(projectilePrefab, launchOffset.position, Quaternion.Inverse(transform.rotation));
+            ProjectileBehaviour bullet = Instantiate(projectilePrefab, launchOffset.position, Quaternion.Inverse(transform.rotation));
+            bullet.SetDamage(this.damage);
             shoot = false;
+            audioManager.Play("Kamehada2");
         }
     }
-
-    public void IncreaseDamage()
-    {
-        gameController.DamageUpPopUp();
-        projectilePrefab.IncreaseBulletDamage();
-    }
-
 }

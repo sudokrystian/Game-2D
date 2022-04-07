@@ -4,12 +4,12 @@ using UnityEngine;
 public class ProjectileBehaviour : MonoBehaviour
 {
 
-    [SerializeField] private float bulletSpeed = 6f;
-    [SerializeField] private float bulletDamage = 1;
+    private float bulletSpeed = 6f;
+    private int bulletDamage = 1;
 
     private void Start()
     {
-        bulletDamage = 1;
+        print("Start damage: " + bulletDamage);
     }
 
     private void Update()
@@ -29,9 +29,10 @@ public class ProjectileBehaviour : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void IncreaseBulletDamage()
+
+
+    public void SetDamage(int dmg)
     {
-        bulletDamage++;
-        print("Damage up! Current damage: " + bulletDamage);
+        this.bulletDamage = dmg;
     }
 }

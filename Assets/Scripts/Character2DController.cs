@@ -14,6 +14,7 @@ public class Character2DController : MonoBehaviour
     // Player body
     private Rigidbody2D rigidBody;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private ManaBar manaBar;
     [SerializeField] private GameObject playerGFX;
 
 
@@ -26,12 +27,19 @@ public class Character2DController : MonoBehaviour
     [SerializeField] private int playerMaxHealth = 8;
     [SerializeField] private float movementSpeed = 4f;
     [SerializeField] private float jumpForce = 7f;
+    [SerializeField] private int playerMaxMana = 5;
+    [SerializeField] private float manaRegenerationCooldown = 3f;
+
     private int damage = 1;
     private int hitpoints;
+    private int mana;
 
     //Bullets
     [SerializeField] private ProjectileBehaviour projectilePrefab;
     [SerializeField] private Transform launchOffset;
+    
+    //Mana timer
+    private float timeManaCharging = 0;
     
     // Animations
     private Animator animator;
@@ -46,6 +54,8 @@ public class Character2DController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         healthBar.SetMaxHealth(playerMaxHealth);
         hitpoints = playerMaxHealth;
+        manaBar.SetMaxMana(playerMaxMana);
+        mana = playerMaxMana;
         animator = playerGFX.GetComponent<Animator>();
     }
 
@@ -57,6 +67,7 @@ public class Character2DController : MonoBehaviour
     private void FixedUpdate()
     {
         PerformActions();
+        ManaCharging();
     }
 
     public void TakeHit(int damage)
@@ -118,7 +129,15 @@ public class Character2DController : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1"))
         {
-            shoot = true;
+            print("Current mana: " + mana);
+            if (mana > 0)
+            {
+                shoot = true;
+            }
+            else
+            {
+                audioManager.Play("NoMana");
+            }
         }
     }
 
@@ -156,10 +175,36 @@ public class Character2DController : MonoBehaviour
 
         if (shoot)
         {
+            // Create a bullet
             ProjectileBehaviour bullet = Instantiate(projectilePrefab, launchOffset.position, Quaternion.Inverse(transform.rotation));
-            bullet.SetDamage(this.damage);
+            bullet.SetDamage(damage);
+            // Update mana
+            mana--;
+            manaBar.SetMana(mana);
+            // Update the flag
             shoot = false;
+            // SOund effect
             audioManager.Play("Kamehada2");
         }
+    }
+
+    private void ManaCharging()
+    {
+        if (timeManaCharging < manaRegenerationCooldown)
+        {
+            timeManaCharging += Time.deltaTime;
+        }
+        else
+        {
+            print("gonna charge");
+            if (mana < playerMaxMana)
+            {
+                print("Mana charging from " + mana + " to " + (mana + 1));
+                mana++;
+                manaBar.SetMana(mana);
+                timeManaCharging = 0;
+            }
+        }
+
     }
 }

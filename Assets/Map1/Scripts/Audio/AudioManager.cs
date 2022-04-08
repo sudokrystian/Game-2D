@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
             sound.audioSource.volume = soundEffectsVolume;
             sound.audioSource.pitch = sound.pitch;
         }
-        Array.Find(sounds, sound => sound.name == name).audioSource.volume = musicVolume;
+        Array.Find(sounds, sound => sound.name == "Theme").audioSource.volume = musicVolume;
     }
 
     private void Start()
@@ -34,5 +34,17 @@ public class AudioManager : MonoBehaviour
     {
         Sound sound = Array.Find(sounds, sound => sound.name == name);
         sound.audioSource.Play();
+    }
+
+    public void UpdateVolume()
+    {
+        var soundEffectsVolume = PlayerPrefs.GetFloat("SoundEffects");
+        var musicVolume = PlayerPrefs.GetFloat("Music");
+
+        foreach (Sound sound in sounds)
+        {
+            sound.audioSource.volume = soundEffectsVolume;
+        }
+        Array.Find(sounds, sound => sound.name == "Theme").audioSource.volume = musicVolume;
     }
 }

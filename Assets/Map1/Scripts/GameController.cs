@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -22,6 +23,14 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         MainCamera = Camera.main;   
+    }
+
+    private void Update()
+    {
+        // if (Input.GetButtonDown("Cancel"))
+        // {
+        //     // SceneManager.LoadScene(0);
+        // }
     }
 
 

@@ -26,4 +26,9 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene("Map1");
     }
+    
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

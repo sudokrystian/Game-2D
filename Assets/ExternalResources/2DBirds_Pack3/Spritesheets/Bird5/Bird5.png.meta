@@ -1,67 +1,67 @@
 fileFormatVersion: 2
-guid: e26a2c05e27d57549a953cfe91b2745c
+guid: 4d317856f30ef4b4185a6f00252948c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6768197780842453128
-    second: Bird 5 Green_0
+      213: 3530417768772121571
+    second: Bird5_0
   - first:
-      213: 4312221329341035080
-    second: Bird 5 Green_1
+      213: 8907520600585641710
+    second: Bird5_1
   - first:
-      213: -8207236571523433603
-    second: Bird 5 Green_2
+      213: -1933917850236070318
+    second: Bird5_2
   - first:
-      213: 892490578819609429
-    second: Bird 5 Green_3
+      213: 34764099437233172
+    second: Bird5_3
   - first:
-      213: -5005843264636907722
-    second: Bird 5 Green_4
+      213: 1572600010944702988
+    second: Bird5_4
   - first:
-      213: 3809211001356844658
-    second: Bird 5 Green_5
+      213: -5774294707019196736
+    second: Bird5_5
   - first:
-      213: -1696627219476529270
-    second: Bird 5 Green_6
+      213: 2455281471518244946
+    second: Bird5_6
   - first:
-      213: -6441589502293428378
-    second: Bird 5 Green_7
+      213: -1107724573193791068
+    second: Bird5_7
   - first:
-      213: -5174979312867782242
-    second: Bird 5 Green_8
+      213: -5609713185204374104
+    second: Bird5_8
   - first:
-      213: 3374313303500884424
-    second: Bird 5 Green_9
+      213: 3038030810741047024
+    second: Bird5_9
   - first:
-      213: -1616181210396043732
-    second: Bird 5 Green_10
+      213: -7855516346349957208
+    second: Bird5_10
   - first:
-      213: 7046070279154592074
-    second: Bird 5 Green_11
+      213: -5548534300904499271
+    second: Bird5_11
   - first:
-      213: -5117467916338566211
-    second: Bird 5 Green_12
+      213: -6547967390816029258
+    second: Bird5_12
   - first:
-      213: -1896776075411692267
-    second: Bird 5 Green_13
+      213: 6765920952601435903
+    second: Bird5_13
   - first:
-      213: 8049044217132734971
-    second: Bird 5 Green_14
+      213: -6255508454585811534
+    second: Bird5_14
   - first:
-      213: -5215521529287027524
-    second: Bird 5 Green_15
+      213: -182775377209627089
+    second: Bird5_15
   - first:
-      213: -756350883567152443
-    second: Bird 5 Green_16
+      213: -8333993886554958954
+    second: Bird5_16
   - first:
-      213: 8128157042924164804
-    second: Bird 5 Green_17
+      213: 4310168556397349025
+    second: Bird5_17
   - first:
-      213: -4185038829378979043
-    second: Bird 5 Green_18
+      213: -7089584566914919210
+    second: Bird5_18
   - first:
-      213: 5110033195664373397
-    second: Bird 5 Green_19
+      213: -4672851069231707331
+    second: Bird5_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -83,6 +83,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -114,9 +115,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -147,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bird 5 Green_0
+      name: Bird5_0
       rect:
         serializedVersion: 2
         x: 0
@@ -161,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8776c4f4af78212a0800000000000000
-      internalID: -6768197780842453128
+      spriteID: 3e3b36871409ef030800000000000000
+      internalID: 3530417768772121571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_1
+      name: Bird5_1
       rect:
         serializedVersion: 2
         x: 800
@@ -182,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8423c30b37618db30800000000000000
-      internalID: 4312221329341035080
+      spriteID: eee916bcacedd9b70800000000000000
+      internalID: 8907520600585641710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_2
+      name: Bird5_2
       rect:
         serializedVersion: 2
         x: 1600
@@ -203,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7b30ce62d90a1e80800000000000000
-      internalID: -8207236571523433603
+      spriteID: 25654e726f75925e0800000000000000
+      internalID: -1933917850236070318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_3
+      name: Bird5_3
       rect:
         serializedVersion: 2
         x: 2400
@@ -224,14 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 553fcebe373c26c00800000000000000
-      internalID: 892490578819609429
+      spriteID: 41484e5a3c18b7000800000000000000
+      internalID: 34764099437233172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_4
+      name: Bird5_4
       rect:
         serializedVersion: 2
         x: 3200
@@ -245,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63f090aa21ca78ab0800000000000000
-      internalID: -5005843264636907722
+      spriteID: c0a6222c06ff2d510800000000000000
+      internalID: 1572600010944702988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_5
+      name: Bird5_5
       rect:
         serializedVersion: 2
         x: 0
@@ -266,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27e726249390dd430800000000000000
-      internalID: 3809211001356844658
+      spriteID: 0c6d3b7be859ddfa0800000000000000
+      internalID: -5774294707019196736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_6
+      name: Bird5_6
       rect:
         serializedVersion: 2
         x: 800
@@ -287,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8fb7d2788e5478e0800000000000000
-      internalID: -1696627219476529270
+      spriteID: 250817d5d79e21220800000000000000
+      internalID: 2455281471518244946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_7
+      name: Bird5_7
       rect:
         serializedVersion: 2
         x: 1600
@@ -308,14 +312,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6673ae60a70ea96a0800000000000000
-      internalID: -6441589502293428378
+      spriteID: 4a910d1ae5290a0f0800000000000000
+      internalID: -1107724573193791068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_8
+      name: Bird5_8
       rect:
         serializedVersion: 2
         x: 2400
@@ -329,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e915580bbb7ce28b0800000000000000
-      internalID: -5174979312867782242
+      spriteID: 8a57110649b4622b0800000000000000
+      internalID: -5609713185204374104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_9
+      name: Bird5_9
       rect:
         serializedVersion: 2
         x: 3200
@@ -350,14 +354,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c98b085218f3de20800000000000000
-      internalID: 3374313303500884424
+      spriteID: 0fe79ea1de0492a20800000000000000
+      internalID: 3038030810741047024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_10
+      name: Bird5_10
       rect:
         serializedVersion: 2
         x: 0
@@ -371,14 +375,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c26dea580cb2299e0800000000000000
-      internalID: -1616181210396043732
+      spriteID: 8af4988d0899bf290800000000000000
+      internalID: -7855516346349957208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_11
+      name: Bird5_11
       rect:
         serializedVersion: 2
         x: 800
@@ -392,14 +396,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a496273569ba8c160800000000000000
-      internalID: 7046070279154592074
+      spriteID: 9b754826375aff2b0800000000000000
+      internalID: -5548534300904499271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_12
+      name: Bird5_12
       rect:
         serializedVersion: 2
         x: 1600
@@ -413,14 +417,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb6e292b0a1bf8b0800000000000000
-      internalID: -5117467916338566211
+      spriteID: 6b5b195c952f025a0800000000000000
+      internalID: -6547967390816029258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_13
+      name: Bird5_13
       rect:
         serializedVersion: 2
         x: 2400
@@ -434,14 +438,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51560ae753c4da5e0800000000000000
-      internalID: -1896776075411692267
+      spriteID: ffe5e2e424165ed50800000000000000
+      internalID: 6765920952601435903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_14
+      name: Bird5_14
       rect:
         serializedVersion: 2
         x: 3200
@@ -455,14 +459,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf9db9fd113f3bf60800000000000000
-      internalID: 8049044217132734971
+      spriteID: 2bdb5f22438ff29a0800000000000000
+      internalID: -6255508454585811534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_15
+      name: Bird5_15
       rect:
         serializedVersion: 2
         x: 0
@@ -476,14 +480,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb4d1785dcebe97b0800000000000000
-      internalID: -5215521529287027524
+      spriteID: f2e6bb743c6a67df0800000000000000
+      internalID: -182775377209627089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_16
+      name: Bird5_16
       rect:
         serializedVersion: 2
         x: 800
@@ -497,14 +501,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c25d63f0e6e085f0800000000000000
-      internalID: -756350883567152443
+      spriteID: 6935d9f27b4b75c80800000000000000
+      internalID: -8333993886554958954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_17
+      name: Bird5_17
       rect:
         serializedVersion: 2
         x: 1600
@@ -518,14 +522,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c6951604c30dc070800000000000000
-      internalID: 8128157042924164804
+      spriteID: 1a84f1e377bc0db30800000000000000
+      internalID: 4310168556397349025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_18
+      name: Bird5_18
       rect:
         serializedVersion: 2
         x: 2400
@@ -539,14 +543,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1b36a3ab51cbe5c0800000000000000
-      internalID: -4185038829378979043
+      spriteID: 6d4d1fb066cbc9d90800000000000000
+      internalID: -7089584566914919210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird 5 Green_19
+      name: Bird5_19
       rect:
         serializedVersion: 2
         x: 3200
@@ -560,8 +564,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 596770a0e1c7ae640800000000000000
-      internalID: 5110033195664373397
+      spriteID: d3bc32ad5b2b62fb0800000000000000
+      internalID: -4672851069231707331
       vertices: []
       indices: 
       edges: []

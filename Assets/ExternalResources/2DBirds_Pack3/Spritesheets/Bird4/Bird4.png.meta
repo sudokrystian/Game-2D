@@ -1,67 +1,67 @@
 fileFormatVersion: 2
-guid: 2366eae9f40af86419045ff062bfad24
+guid: 126aba50ddd39ea4fa90c5a9780c8549
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8728508913616413636
-    second: Bird2 Black_0
+      213: 4034257460408169424
+    second: Bird4_0
   - first:
-      213: -3823469074276626260
-    second: Bird2 Black_1
+      213: -4281374726264021401
+    second: Bird4_1
   - first:
-      213: 2768579851918101041
-    second: Bird2 Black_2
+      213: -3002276041791684087
+    second: Bird4_2
   - first:
-      213: -7211942938903408927
-    second: Bird2 Black_3
+      213: 3517295134404392139
+    second: Bird4_3
   - first:
-      213: -7904629705493038702
-    second: Bird2 Black_4
+      213: 6035213824899840284
+    second: Bird4_4
   - first:
-      213: -4090442220308779368
-    second: Bird2 Black_5
+      213: -6249629946171657406
+    second: Bird4_5
   - first:
-      213: 992370560397196793
-    second: Bird2 Black_6
+      213: -7724161754143831036
+    second: Bird4_6
   - first:
-      213: 7915062203546472619
-    second: Bird2 Black_7
+      213: -8659702038781827052
+    second: Bird4_7
   - first:
-      213: 5590285546891675646
-    second: Bird2 Black_8
+      213: 1078886039894458766
+    second: Bird4_8
   - first:
-      213: -7179277824803788989
-    second: Bird2 Black_9
+      213: 4681429771396640862
+    second: Bird4_9
   - first:
-      213: 6959885488490297276
-    second: Bird2 Black_10
+      213: 6747637144811510234
+    second: Bird4_10
   - first:
-      213: -588897862574136129
-    second: Bird2 Black_11
+      213: -3892817943168547334
+    second: Bird4_11
   - first:
-      213: -2872105666059223996
-    second: Bird2 Black_12
+      213: -82122183698775628
+    second: Bird4_12
   - first:
-      213: 8508624435733054800
-    second: Bird2 Black_13
+      213: 5254994664472959994
+    second: Bird4_13
   - first:
-      213: 2107571298667128884
-    second: Bird2 Black_14
+      213: -843148579151043868
+    second: Bird4_14
   - first:
-      213: -5359265557667769448
-    second: Bird2 Black_15
+      213: 1679915975994522024
+    second: Bird4_15
   - first:
-      213: 1607891437148325340
-    second: Bird2 Black_16
+      213: -6007213997567844384
+    second: Bird4_16
   - first:
-      213: 2570771827038082324
-    second: Bird2 Black_17
+      213: -6636799433079423737
+    second: Bird4_17
   - first:
-      213: 6906323014870000424
-    second: Bird2 Black_18
+      213: -8333853364452650867
+    second: Bird4_18
   - first:
-      213: -213647649130833022
-    second: Bird2 Black_19
+      213: 4989761215780511389
+    second: Bird4_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -83,6 +83,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -114,9 +115,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -147,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bird2 Black_0
+      name: Bird4_0
       rect:
         serializedVersion: 2
         x: 0
@@ -161,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c3efee7c94e12970800000000000000
-      internalID: 8728508913616413636
+      spriteID: 0d3391c29cf8cf730800000000000000
+      internalID: 4034257460408169424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_1
+      name: Bird4_1
       rect:
         serializedVersion: 2
         x: 800
@@ -182,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca0dc02722f40fac0800000000000000
-      internalID: -3823469074276626260
+      spriteID: 76e92b2ce508594c0800000000000000
+      internalID: -4281374726264021401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_2
+      name: Bird4_2
       rect:
         serializedVersion: 2
         x: 1600
@@ -203,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ac1ede4b8fb6620800000000000000
-      internalID: 2768579851918101041
+      spriteID: 9024753c8d5c556d0800000000000000
+      internalID: -3002276041791684087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_3
+      name: Bird4_3
       rect:
         serializedVersion: 2
         x: 2400
@@ -224,14 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ee864a8b180aeb90800000000000000
-      internalID: -7211942938903408927
+      spriteID: bc432601a41ffc030800000000000000
+      internalID: 3517295134404392139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_4
+      name: Bird4_4
       rect:
         serializedVersion: 2
         x: 3200
@@ -245,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2993613d92d1d4290800000000000000
-      internalID: -7904629705493038702
+      spriteID: c197ea07ff261c350800000000000000
+      internalID: 6035213824899840284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_5
+      name: Bird4_5
       rect:
         serializedVersion: 2
         x: 0
@@ -266,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89e2c340974db37c0800000000000000
-      internalID: -4090442220308779368
+      spriteID: 2437bc80daad449a0800000000000000
+      internalID: -6249629946171657406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_6
+      name: Bird4_6
       rect:
         serializedVersion: 2
         x: 800
@@ -287,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fdb70254cb95cd00800000000000000
-      internalID: 992370560397196793
+      spriteID: 40c49981fc34ec490800000000000000
+      internalID: -7724161754143831036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_7
+      name: Bird4_7
       rect:
         serializedVersion: 2
         x: 1600
@@ -308,14 +312,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba012896323f7dd60800000000000000
-      internalID: 7915062203546472619
+      spriteID: 418eea570ee82d780800000000000000
+      internalID: -8659702038781827052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_8
+      name: Bird4_8
       rect:
         serializedVersion: 2
         x: 2400
@@ -329,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef78a77161fa49d40800000000000000
-      internalID: 5590285546891675646
+      spriteID: e8189091329f8fe00800000000000000
+      internalID: 1078886039894458766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_9
+      name: Bird4_9
       rect:
         serializedVersion: 2
         x: 3200
@@ -350,14 +354,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3472bb41bd41e5c90800000000000000
-      internalID: -7179277824803788989
+      spriteID: e50f805e297c7f040800000000000000
+      internalID: 4681429771396640862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_10
+      name: Bird4_10
       rect:
         serializedVersion: 2
         x: 0
@@ -371,14 +375,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb73cda0afa769060800000000000000
-      internalID: 6959885488490297276
+      spriteID: ad998b19b3c64ad50800000000000000
+      internalID: 6747637144811510234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_11
+      name: Bird4_11
       rect:
         serializedVersion: 2
         x: 800
@@ -392,14 +396,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb4284c9380d3d7f0800000000000000
-      internalID: -588897862574136129
+      spriteID: af50c2aa4bee9f9c0800000000000000
+      internalID: -3892817943168547334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_12
+      name: Bird4_12
       rect:
         serializedVersion: 2
         x: 1600
@@ -413,14 +417,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44c37212d1b3428d0800000000000000
-      internalID: -2872105666059223996
+      spriteID: 4b1847c1f4e3cdef0800000000000000
+      internalID: -82122183698775628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_13
+      name: Bird4_13
       rect:
         serializedVersion: 2
         x: 2400
@@ -434,14 +438,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 055c31bf7d4b41670800000000000000
-      internalID: 8508624435733054800
+      spriteID: afbdb702ecd7de840800000000000000
+      internalID: 5254994664472959994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_14
+      name: Bird4_14
       rect:
         serializedVersion: 2
         x: 3200
@@ -455,14 +459,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 438ecd30ee89f3d10800000000000000
-      internalID: 2107571298667128884
+      spriteID: 4e2a3de95d88c44f0800000000000000
+      internalID: -843148579151043868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_15
+      name: Bird4_15
       rect:
         serializedVersion: 2
         x: 0
@@ -476,14 +480,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8931a32be5010a5b0800000000000000
-      internalID: -5359265557667769448
+      spriteID: 8a938a9fda2405710800000000000000
+      internalID: 1679915975994522024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_16
+      name: Bird4_16
       rect:
         serializedVersion: 2
         x: 800
@@ -497,14 +501,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd54e9c3eb0605610800000000000000
-      internalID: 1607891437148325340
+      spriteID: 0efd63162b612aca0800000000000000
+      internalID: -6007213997567844384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_17
+      name: Bird4_17
       rect:
         serializedVersion: 2
         x: 1600
@@ -518,14 +522,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 415df2d2b573da320800000000000000
-      internalID: 2570771827038082324
+      spriteID: 70d79c1341a55e3a0800000000000000
+      internalID: -6636799433079423737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_18
+      name: Bird4_18
       rect:
         serializedVersion: 2
         x: 2400
@@ -539,14 +543,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8236e65d03038df50800000000000000
-      internalID: 6906323014870000424
+      spriteID: d801b990584385c80800000000000000
+      internalID: -8333853364452650867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bird2 Black_19
+      name: Bird4_19
       rect:
         serializedVersion: 2
         x: 3200
@@ -560,8 +564,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28b95765898f80df0800000000000000
-      internalID: -213647649130833022
+      spriteID: d9e5e9c83613f3540800000000000000
+      internalID: 4989761215780511389
       vertices: []
       indices: 
       edges: []

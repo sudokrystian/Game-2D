@@ -112,19 +112,12 @@ public class EnemyBehaviour : MonoBehaviour
         {
             currentWaypoint++;
         }
-        // Rotate the enemy accordingly
-        // if (force.x >= 0.01f)
-        // {
-        //     enemyGFX.localScale = new Vector3(-enemyGFX.localScale.x, enemyGFX.localScale.y, enemyGFX.localScale.z);
-        // } else if (force.x <= -0.01f)
-        // {
-        //     enemyGFX.localScale = new Vector3(enemyGFX.localScale.x, enemyGFX.localScale.y, enemyGFX.localScale.z);
-        // }
-        if (force.x >= 0.01f)
+
+        if (rigidBody.velocity.x >= 0.01f)
         {
             enemyGFX.transform.rotation = Quaternion.Euler(0, 180, 0);
 
-        } else if (force.x <= -0.01f)
+        } else if (rigidBody.velocity.x <= -0.01f)
         {
             enemyGFX.transform.rotation = Quaternion.identity;
         }

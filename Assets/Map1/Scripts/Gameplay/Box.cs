@@ -16,7 +16,9 @@ public class Box : MonoBehaviour
     private Animator animator;
     private readonly int hitHash = Animator.StringToHash("Hit");
     private readonly int destroyHash = Animator.StringToHash("Destroy");
-    private float dissapearDelay = 2f;
+
+    // Audio manager
+    public AudioManager audioManager;
 
     private void Start()
     {
@@ -26,15 +28,17 @@ public class Box : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        audioManager.Play("BoxHit");
         animator.SetTrigger(hitHash);
         health -= damage;
         if (health <= 0)
         {
+            audioManager.Play("BoxDestroyed");
             animator.SetTrigger(destroyHash);
             Instantiate(boxDrop, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(
                 gameObject, 
-                this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + dissapearDelay
+                this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length
                 );
         }
     }

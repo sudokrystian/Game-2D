@@ -10,6 +10,8 @@ public class BearTrap : MonoBehaviour
     private Animator animator;
     private readonly int activateHash = Animator.StringToHash("Activate");
     private float disapearDelay = 2f;
+    // Audio manager
+    public AudioManager audioManager;
 
     void Start()
     {
@@ -20,6 +22,7 @@ public class BearTrap : MonoBehaviour
         var player = collision.collider.GetComponent<Character2DController>();
         if (player)
         {
+            audioManager.Play("BearTrap");
             animator.SetTrigger(activateHash);
             player.TakeHit(bearTrapDamage);
         }

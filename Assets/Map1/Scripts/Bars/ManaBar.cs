@@ -11,18 +11,6 @@ public class ManaBar : MonoBehaviour
     [SerializeField] private Gradient Gradient;
 
     [SerializeField] private Image Fill;
-
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     public void SetMana(float mana)
     {

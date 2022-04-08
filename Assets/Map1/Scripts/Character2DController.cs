@@ -129,7 +129,6 @@ public class Character2DController : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1"))
         {
-            print("Current mana: " + mana);
             if (mana > 0)
             {
                 shoot = true;
@@ -196,10 +195,8 @@ public class Character2DController : MonoBehaviour
         }
         else
         {
-            print("gonna charge");
             if (mana < playerMaxMana)
             {
-                print("Mana charging from " + mana + " to " + (mana + 1));
                 mana++;
                 manaBar.SetMana(mana);
                 timeManaCharging = 0;

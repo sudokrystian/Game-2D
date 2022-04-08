@@ -26,13 +26,10 @@ public class Box : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        print("Box taking damage");
         animator.SetTrigger(hitHash);
         health -= damage;
         if (health <= 0)
         {
-            print("Box destroying");
-
             animator.SetTrigger(destroyHash);
             Instantiate(boxDrop, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(

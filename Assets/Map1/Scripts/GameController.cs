@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
     private void FixedUpdate()
     {
         mainCamera.transform.position =
-            new Vector3(followObject.position.x, followObject.position.y + mainCameraYOffset, this.transform.position.z);
+            new Vector3(followObject.position.x, followObject.position.y + mainCameraYOffset, -1);
     }
     
     public void GameOver()

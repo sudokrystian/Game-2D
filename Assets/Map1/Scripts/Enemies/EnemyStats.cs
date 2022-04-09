@@ -67,7 +67,6 @@ public class EnemyStats : MonoBehaviour
     public void TakeHit(int damage)
     {
         var blood = Instantiate(bloodPrefab, rigidBody.transform.position, rigidBody.transform.rotation);
-        blood.GetComponent<ParticleSystem>().Play();
         FindObjectOfType<AudioManager>().Play("BulletHit");
         hitpoints -= damage;
         healthBar.SetHealth(hitpoints);

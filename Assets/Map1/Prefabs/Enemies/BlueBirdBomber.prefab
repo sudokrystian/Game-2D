@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyGFX: {fileID: 3981904919149664621}
-  bloodPrefab: {fileID: 5824799625345667159, guid: 7dd45c1483a2a3142be2402db2a2bf1b, type: 3}
+  bloodPrefab: {fileID: 4992315921776654168, guid: f963f39bfb7657047bfd7f07fadcaec5, type: 3}
   healthBar: {fileID: 3981904919865836845}
   enemySpeed: 247.12
   enemyMaxHealth: 5

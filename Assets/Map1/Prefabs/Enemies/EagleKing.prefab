@@ -460,7 +460,7 @@ MonoBehaviour:
   enemyMaxHealth: 4
   enemyDamage: 4
   drop: {fileID: 8106377224569329082, guid: 23fc78cb7bdf3a743820ec7a3aa296da, type: 3}
-  dropChance: 0.07
+  dropChance: 0.08
 --- !u!1 &7784175393948559158
 GameObject:
   m_ObjectHideFlags: 0

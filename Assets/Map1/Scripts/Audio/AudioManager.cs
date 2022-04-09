@@ -6,14 +6,17 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-
+    private AudioSource theme;
     [SerializeField] public Sound[] sounds;
+    private List<AudioSource> internalAudioSources;
     private List<AudioSource> gameObjectsAudioSources;
     [SerializeField] private float spatialBlend = 1f;
     [SerializeField] private float maxDistance = 15;
+    private string themeTitle = "Theme";
 
     void Awake()
     {
+        internalAudioSources = new List<AudioSource>(sounds.Length);
         gameObjectsAudioSources = new List<AudioSource>(sounds.Length);
         var soundEffectsVolume = PlayerPrefs.GetFloat("SoundEffects");
         var musicVolume = PlayerPrefs.GetFloat("Music");
@@ -25,13 +28,18 @@ public class AudioManager : MonoBehaviour
 
             sound.audioSource.volume = soundEffectsVolume;
             sound.audioSource.pitch = sound.pitch;
+            if (!sound.name.Equals(themeTitle))
+            {
+                internalAudioSources.Add(sound.audioSource);
+            }
         }
-        Array.Find(sounds, sound => sound.name == "Theme").audioSource.volume = musicVolume;
+        this.theme = Array.Find(sounds, sound => sound.name == themeTitle).audioSource;
+        theme.volume = musicVolume;
     }
 
     private void Start()
     {
-        Play("Theme");
+        Play(themeTitle);
     }
 
     public void Play(string name)
@@ -45,18 +53,10 @@ public class AudioManager : MonoBehaviour
         var soundEffectsVolume = PlayerPrefs.GetFloat("SoundEffects");
         var musicVolume = PlayerPrefs.GetFloat("Music");
 
-        foreach (Sound sound in sounds)
-        {
-            sound.audioSource.volume = soundEffectsVolume;
-        }
+        internalAudioSources.ForEach(source => source.volume = soundEffectsVolume);
         gameObjectsAudioSources.ForEach(source => source.volume = soundEffectsVolume);
         
-        Array.Find(sounds, sound => sound.name == "Theme").audioSource.volume = musicVolume;
-    }
-
-    public Sound GetSound(string name)
-    {
-        return Array.Find(sounds, sound => sound.name == name);
+        theme.volume = musicVolume;
     }
 
     public AudioSource AttachAudioSourceToGameObject(GameObject gameObject, string name)

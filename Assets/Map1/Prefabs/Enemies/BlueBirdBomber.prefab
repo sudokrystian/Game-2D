@@ -104,8 +104,8 @@ MonoBehaviour:
   enemySpeed: 247.12
   enemyMaxHealth: 5
   enemyDamage: 1
-  drop: {fileID: 8621138607617945000, guid: 4fdfae75b8adf0845bb826e48330f6ab, type: 3}
-  dropChance: 0.07
+  drop: {fileID: 8108562422423784745, guid: 1b9d5dd946a742e4e801f0e0d783ac1b, type: 3}
+  dropChance: 0.1
 --- !u!114 &3981904918249659771
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class ArrowProjectile : MonoBehaviour
 
     private void Start()
     {
-        // audioManager.Play("Arrow");
+        audioManager.AttachAudioSourceToGameObject(gameObject, "Arrow").Play();
     }
 
     void Update()

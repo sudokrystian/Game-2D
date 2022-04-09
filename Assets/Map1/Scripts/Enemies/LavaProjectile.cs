@@ -33,5 +33,9 @@ public class LavaProjectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else
+        {
+            Physics2D.IgnoreCollision(lava.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
+        }
     }
 }

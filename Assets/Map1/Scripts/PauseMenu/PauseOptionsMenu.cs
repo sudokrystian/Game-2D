@@ -18,7 +18,6 @@ public class PauseOptionsMenu : MonoBehaviour
     
     public void MusicVolume(float volume)
     {
-        print("CHANGING PAUSE VOLUME TO " + volume);
         PlayerPrefs.SetFloat("Music", volume);
         PlayerPrefs.Save();
         audioManager.UpdateVolume();

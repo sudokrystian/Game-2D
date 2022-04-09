@@ -12,7 +12,7 @@ public class Lava : MonoBehaviour
     public AudioManager audioManager;
     void Start()
     {
-        audioManager.Play("Lava");
+        PlaySoundEffect();
         InvokeRepeating("CreateLavaProjectile", lavaTimer, lavaTimer);
     }
 
@@ -32,4 +32,12 @@ public class Lava : MonoBehaviour
         Vector3 projectilePosition = new Vector3(lavaSpawn.position.x, lavaSpawn.position.y, z);
         Instantiate(lavaProjectile, projectilePosition, lavaSpawn.rotation);
     }
+
+    private void PlaySoundEffect()
+    {
+       AudioSource audioSource =  audioManager.AttachAudioSourceToGameObject(gameObject, "Lava");
+       audioSource.loop = true;
+       audioSource.Play();
+    }
+    
 }

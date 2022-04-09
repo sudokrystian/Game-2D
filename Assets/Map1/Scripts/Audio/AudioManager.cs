@@ -8,9 +8,13 @@ public class AudioManager : MonoBehaviour
 {
 
     [SerializeField] public Sound[] sounds;
+    private List<AudioSource> gameObjectsAudioSources;
+    [SerializeField] private float spatialBlend = 1f;
+    [SerializeField] private float maxDistance = 15;
 
     void Awake()
     {
+        gameObjectsAudioSources = new List<AudioSource>(sounds.Length);
         var soundEffectsVolume = PlayerPrefs.GetFloat("SoundEffects");
         var musicVolume = PlayerPrefs.GetFloat("Music");
 
@@ -45,6 +49,26 @@ public class AudioManager : MonoBehaviour
         {
             sound.audioSource.volume = soundEffectsVolume;
         }
+        gameObjectsAudioSources.ForEach(source => source.volume = soundEffectsVolume);
+        
         Array.Find(sounds, sound => sound.name == "Theme").audioSource.volume = musicVolume;
+    }
+
+    public Sound GetSound(string name)
+    {
+        return Array.Find(sounds, sound => sound.name == name);
+    }
+
+    public AudioSource AttachAudioSourceToGameObject(GameObject gameObject, string name)
+    {
+        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        AudioSource audioSourceComponent = gameObject.AddComponent<AudioSource>();
+        audioSourceComponent.clip = sound.clip;
+        audioSourceComponent.spatialBlend = spatialBlend;
+        audioSourceComponent.maxDistance = maxDistance;
+        audioSourceComponent.rolloffMode = AudioRolloffMode.Linear;
+        audioSourceComponent.volume = sound.audioSource.volume;
+        gameObjectsAudioSources.Add(audioSourceComponent);
+        return audioSourceComponent;
     }
 }

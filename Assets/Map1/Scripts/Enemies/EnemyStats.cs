@@ -13,17 +13,25 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] private float enemySpeed = 250f;
     [SerializeField] private int enemyMaxHealth = 5;
     [SerializeField] private int enemyDamage = 1;
+    [SerializeField] private float jumpForce = 4f;
+
     private int hitpoints;
     // Collision info
     private float timeColliding = 0;
     // Time before damage is taken
     private float timeThreshold = 0.5f;
-    //Drops
+    // Drops
     public GameObject drop;
     [SerializeField] private float dropChance = 0.07f;
-    
+    // Audio Manager
+    private AudioManager audioManager;
+    private AudioSource hitSound;
+    private AudioSource deathSound;
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+        hitSound = audioManager.AttachAudioSourceToGameObject(gameObject, "Hurt");
+        deathSound = audioManager.AttachAudioSourceToGameObject(gameObject, "Disapear");
         rigidBody = GetComponent<Rigidbody2D>();
         hitpoints = enemyMaxHealth;
         healthBar.SetMaxHealth(enemyMaxHealth);
@@ -36,7 +44,9 @@ public class EnemyStats : MonoBehaviour
     public int EnemyDamage => enemyDamage;
 
     public Transform EnemyGfx => enemyGFX;
-    
+
+    public float JumpForce => jumpForce;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var player = collision.collider.GetComponent<Character2DController>();
@@ -67,11 +77,14 @@ public class EnemyStats : MonoBehaviour
     public void TakeHit(int damage)
     {
         var blood = Instantiate(bloodPrefab, rigidBody.transform.position, rigidBody.transform.rotation);
-        FindObjectOfType<AudioManager>().Play("BulletHit");
+        hitSound.maxDistance = 20;
+        hitSound.Play();
         hitpoints -= damage;
         healthBar.SetHealth(hitpoints);
         if (hitpoints <= 0)
         {
+            deathSound.maxDistance = 20;
+            deathSound.Play();
             // Random chance for drops
             if (Random.value < dropChance)
             {

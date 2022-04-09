@@ -9,12 +9,15 @@ public class ArrowProjectile : MonoBehaviour
     [SerializeField] private float arrowSpeed = 6f;
     [SerializeField] private int arrowDamage = 2;
     // Audio manager
-    public AudioManager audioManager;
+    private AudioManager audioManager;
+    private AudioSource audioSource;
 
 
     private void Start()
     {
-        audioManager.AttachAudioSourceToGameObject(gameObject, "Arrow").Play();
+        audioManager = FindObjectOfType<AudioManager>();
+        audioSource = audioManager.AttachAudioSourceToGameObject(gameObject, "Arrow");
+        audioSource.Play();
     }
 
     void Update()
@@ -29,6 +32,13 @@ public class ArrowProjectile : MonoBehaviour
         {
             player.TakeHit(arrowDamage);
         }
+        var enemy = collision.collider.GetComponent<EnemyStats>();
+        if (enemy)
+        {
+
+            enemy.TakeHit(arrowDamage);
+        }
+        audioManager.DetachAudioSource(audioSource);
         Destroy(gameObject);
     }
 }

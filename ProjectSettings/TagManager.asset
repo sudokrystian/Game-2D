@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Block
+  - PlayerHitbox
   layers:
   - Default
   - TransparentFX

@@ -13,5 +13,11 @@ public class SpikeTrap : MonoBehaviour
         {
             player.TakeHit(spikeTrapDamage);
         }
+        var enemy = collision.collider.GetComponent<EnemyStats>();
+        if (enemy)
+        {
+
+            enemy.TakeHit(spikeTrapDamage);
+        }
     }
 }

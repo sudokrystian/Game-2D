@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563142877778223108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 1.34, z: 0}
+  m_LocalPosition: {x: -0.1, y: 0.548, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 563142878760331993}
@@ -154,9 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbb8dbdb508f6b42b74171e1da5be9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaProjectile: {fileID: 0}
+  lavaProjectile: {fileID: 5318563703045659188, guid: 3896499aa75fe8f4caa2baf816c4a1d1, type: 3}
   lavaSpawn: {fileID: 563142877778223227}
-  audioManager: {fileID: 0}
 --- !u!95 &5673270740046275337
 Animator:
   serializedVersion: 3

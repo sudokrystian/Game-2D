@@ -390,6 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 5620820908048742122}
   visionRange: 10
+  canFly: 1
   target: {fileID: 0}
   nextWaypointDistance: 0.5
 --- !u!114 &5620820908048742122
@@ -410,6 +411,7 @@ MonoBehaviour:
   enemySpeed: 300
   enemyMaxHealth: 4
   enemyDamage: 2
+  jumpForce: 1
   drop: {fileID: 7428563576888346620, guid: 68f0d5036f6491d46862371794050f48, type: 3}
   dropChance: 0.1
 --- !u!1 &8630469704942584948

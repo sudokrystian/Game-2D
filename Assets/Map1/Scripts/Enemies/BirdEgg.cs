@@ -9,9 +9,10 @@ public class BirdEgg : MonoBehaviour
     [SerializeField] private float eggSpeed = 6f;
     private int eggDamage = 2;
     // Audio manager
-    public AudioManager audioManager;
+    private AudioManager audioManager;
     void Update()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         eggProjectile.transform.position += -transform.up * Time.deltaTime * eggSpeed;
     }
 
@@ -22,6 +23,12 @@ public class BirdEgg : MonoBehaviour
         {
             audioManager.Play("EggCrack");
             player.TakeHit(eggDamage);
+        }
+        var enemy = collision.collider.GetComponent<EnemyStats>();
+        if (enemy)
+        {
+
+            enemy.TakeHit(eggDamage);
         }
         Destroy(gameObject);
     }

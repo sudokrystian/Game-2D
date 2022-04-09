@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     private AudioSource theme;
     [SerializeField] public Sound[] sounds;
     private List<AudioSource> internalAudioSources;
-    private List<AudioSource> gameObjectsAudioSources;
+    private HashSet<AudioSource> gameObjectsAudioSources;
     [SerializeField] private float spatialBlend = 1f;
     [SerializeField] private float maxDistance = 15;
     private string themeTitle = "Theme";
@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         internalAudioSources = new List<AudioSource>(sounds.Length);
-        gameObjectsAudioSources = new List<AudioSource>(sounds.Length);
+        gameObjectsAudioSources = new HashSet<AudioSource>();
         var soundEffectsVolume = PlayerPrefs.GetFloat("SoundEffects");
         var musicVolume = PlayerPrefs.GetFloat("Music");
 
@@ -54,8 +54,10 @@ public class AudioManager : MonoBehaviour
         var musicVolume = PlayerPrefs.GetFloat("Music");
 
         internalAudioSources.ForEach(source => source.volume = soundEffectsVolume);
-        gameObjectsAudioSources.ForEach(source => source.volume = soundEffectsVolume);
-        
+        foreach (AudioSource audioSource in gameObjectsAudioSources)
+        {
+            audioSource.volume = soundEffectsVolume;
+        }
         theme.volume = musicVolume;
     }
 
@@ -70,5 +72,10 @@ public class AudioManager : MonoBehaviour
         audioSourceComponent.volume = sound.audioSource.volume;
         gameObjectsAudioSources.Add(audioSourceComponent);
         return audioSourceComponent;
+    }
+
+    public void DetachAudioSource(AudioSource audioSource)
+    {
+        gameObjectsAudioSources.Remove(audioSource);
     }
 }

@@ -11,7 +11,7 @@ public class Character2DController : MonoBehaviour
     // Game Controller
     [SerializeField] private GameController gameController;
     // Audio
-    [SerializeField] private AudioManager audioManager;
+    private AudioManager audioManager;
 
     // Player body
     private Rigidbody2D rigidBody;
@@ -60,6 +60,7 @@ public class Character2DController : MonoBehaviour
     {
         // Initialize values
         rigidBody = GetComponent<Rigidbody2D>();
+        audioManager = FindObjectOfType<AudioManager>();
         animator = playerGFX.GetComponent<Animator>();
         healthBarStats = healthBar.GetComponentInChildren<TextMeshProUGUI>();
         manaBarStats = manaBar.GetComponentInChildren<TextMeshProUGUI>();

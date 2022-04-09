@@ -102,11 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68112e03b5780c348911f2124c8ecb0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectile: {fileID: 274352711347482442, guid: c87ef89b45146474fb336028450cceb2, type: 3}
   projectileSpawn: {fileID: 8292317743804327158}
   arrowTimer: 2
   spikesDamage: 2
-  audioManager: {fileID: 0}
 --- !u!1 &8292317744574847571
 GameObject:
   m_ObjectHideFlags: 0

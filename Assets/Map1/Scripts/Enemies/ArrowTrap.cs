@@ -11,9 +11,12 @@ public class ArrowTrap : MonoBehaviour
     [SerializeField] private float arrowTimer = 2f;
     [SerializeField] private int spikesDamage = 2;
     // Audio manager
-    public AudioManager audioManager;
+    private AudioManager audioManager;
+    private AudioSource audioSource;
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+        audioSource = audioManager.AttachAudioSourceToGameObject(gameObject, "Indestructible");
         InvokeRepeating("CreateArrowProjectile", arrowTimer, arrowTimer);
     }
 
@@ -24,10 +27,16 @@ public class ArrowTrap : MonoBehaviour
         {
             player.TakeHit(spikesDamage);
         }
+        var enemy = collision.collider.GetComponent<EnemyStats>();
+        if (enemy)
+        {
+
+            enemy.TakeHit(spikesDamage);
+        }
         var projectile = collision.collider.GetComponent<ProjectileBehaviour>();
         if (projectile)
         {
-            audioManager.Play("Indestructible");
+            audioSource.Play();
         }
 
     }

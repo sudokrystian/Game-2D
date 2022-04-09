@@ -10,9 +10,10 @@ public class LavaProjectile : MonoBehaviour
     [SerializeField] private int lavaDamage = 3;
     [SerializeField] private float impulseForce = 9f;
     // Audio manager
-    public AudioManager audioManager;
+    private AudioManager audioManager;
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         var x = Random.Range(-5f, 5f);
         rigidBody.AddForce(new Vector2(x, impulseForce), ForceMode2D.Impulse);
@@ -27,7 +28,12 @@ public class LavaProjectile : MonoBehaviour
             audioManager.Play("LavaProjectile");
             player.TakeHit(lavaDamage);
         }
+        var enemy = collision.collider.GetComponent<EnemyStats>();
+        if (enemy)
+        {
 
+            enemy.TakeHit(lavaDamage);
+        }
         var lava = collision.collider.GetComponent<Lava>();
         if (!lava)
         {

@@ -18,10 +18,11 @@ public class Box : MonoBehaviour
     private readonly int destroyHash = Animator.StringToHash("Destroy");
 
     // Audio manager
-    public AudioManager audioManager;
+    private AudioManager audioManager;
 
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         health = maxHealth;
         animator = gameObject.GetComponent<Animator>();
     }
@@ -36,10 +37,6 @@ public class Box : MonoBehaviour
             audioManager.Play("BoxDestroyed");
             animator.SetTrigger(destroyHash);
             Instantiate(boxDrop, gameObject.transform.position, gameObject.transform.rotation);
-            Destroy(
-                gameObject, 
-                this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length
-                );
         }
     }
 }

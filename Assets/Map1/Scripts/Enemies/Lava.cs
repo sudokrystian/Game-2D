@@ -6,12 +6,13 @@ public class Lava : MonoBehaviour
 {
     public GameObject lavaProjectile;
     public Transform lavaSpawn;
-    private int lavaTimer = 2;
+    [SerializeField] private float lavaTimer = 2.4f;
     private int lavaDamage = 99999;
     // Audio manager
-    public AudioManager audioManager;
+    private AudioManager audioManager;
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         PlaySoundEffect();
         InvokeRepeating("CreateLavaProjectile", lavaTimer, lavaTimer);
     }
@@ -22,6 +23,12 @@ public class Lava : MonoBehaviour
         if (player)
         {
             player.TakeHit(lavaDamage);
+        }
+        var enemy = collision.collider.GetComponent<EnemyStats>();
+        if (enemy)
+        {
+
+            enemy.TakeHit(lavaDamage);
         }
     }
     

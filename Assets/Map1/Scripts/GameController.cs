@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     // Audio manager
-    [SerializeField] private AudioManager audioManager;
+     private AudioManager audioManager;
     // Camera behaviour
     [SerializeField] private Transform followObject;
     // Game over behaviour
@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         mainCamera = Camera.main;   
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     private void Update()

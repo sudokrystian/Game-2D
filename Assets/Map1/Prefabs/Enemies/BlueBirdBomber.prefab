@@ -104,6 +104,7 @@ MonoBehaviour:
   enemySpeed: 247.12
   enemyMaxHealth: 5
   enemyDamage: 1
+  jumpForce: 1
   drop: {fileID: 8108562422423784745, guid: 1b9d5dd946a742e4e801f0e0d783ac1b, type: 3}
   dropChance: 0.1
 --- !u!114 &3981904918249659771
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 3981904918249659770}
-  projectile: {fileID: 0}
+  projectile: {fileID: 8843481740094532602, guid: 07e8b23faf453854996bf6ffe4f14e9a, type: 3}
   projectileSpawn: {fileID: 3981904919204195458}
   bombTimer: 2
 --- !u!1 &3981904918410268445
@@ -569,7 +570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3981904919204195461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36, y: -0.85, z: 1}
+  m_LocalPosition: {x: 0.65, y: -0.85, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3981904918249659769}

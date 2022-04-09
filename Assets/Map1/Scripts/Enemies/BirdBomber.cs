@@ -13,7 +13,6 @@ public class BirdBomber : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("CreateEggProjectile", bombTimer, bombTimer);
-
     }
 
     private void CreateEggProjectile()

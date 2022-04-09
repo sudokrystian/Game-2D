@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character2DController : MonoBehaviour
 
@@ -16,6 +18,11 @@ public class Character2DController : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private ManaBar manaBar;
     [SerializeField] private GameObject playerGFX;
+    [SerializeField] private TextMeshProUGUI magicStats;
+    [SerializeField] private TextMeshProUGUI movementStats;
+    private TextMeshProUGUI healthBarStats;
+    private TextMeshProUGUI manaBarStats;
+
 
 
     // Player actions
@@ -51,12 +58,21 @@ public class Character2DController : MonoBehaviour
     
     private void Start()
     {
+        // Initialize values
         rigidBody = GetComponent<Rigidbody2D>();
+        animator = playerGFX.GetComponent<Animator>();
+        healthBarStats = healthBar.GetComponentInChildren<TextMeshProUGUI>();
+        manaBarStats = manaBar.GetComponentInChildren<TextMeshProUGUI>();
+
+        // Update player stats in UI
         healthBar.SetMaxHealth(playerMaxHealth);
         hitpoints = playerMaxHealth;
         manaBar.SetMaxMana(playerMaxMana);
         mana = playerMaxMana;
-        animator = playerGFX.GetComponent<Animator>();
+        magicStats.text = Convert.ToString(damage);
+        movementStats.text = Convert.ToString(movementSpeed);
+        healthBarStats.text = GetHealthStats();
+        manaBarStats.text = GetManaStats();
     }
 
     private void Update()
@@ -72,8 +88,10 @@ public class Character2DController : MonoBehaviour
 
     public void TakeHit(int damage)
     {
+        // Update UI
         hitpoints -= damage;
         healthBar.SetHealth(hitpoints);
+        healthBarStats.text = GetHealthStats();
         // Animate being hit
         animator.SetTrigger(hitHash);
         audioManager.Play("Hurt");
@@ -87,35 +105,56 @@ public class Character2DController : MonoBehaviour
 
     public void RecoverHealth(int extraHealth)
     {
-        gameController.HealthRecoverPopUp();
+        gameController.HealthRecoverPopUp(extraHealth);
         if (hitpoints != playerMaxHealth)
         {
             if ((hitpoints + extraHealth) > playerMaxHealth)
             {
                 hitpoints = playerMaxHealth;
                 healthBar.SetHealth(hitpoints);
+                healthBarStats.text = GetHealthStats();
             }
             else
             {
                 hitpoints += extraHealth;
                 healthBar.SetHealth(hitpoints);
+                healthBarStats.text = GetHealthStats();
             }
         }
     }
 
     public void IncreaseHealth(int extraHealth)
     {
-        gameController.HealthUpPopUp();
+        gameController.HealthUpPopUp(extraHealth);
         playerMaxHealth += extraHealth;
         hitpoints += extraHealth;
         healthBar.SetMaxHealth(playerMaxHealth);
         healthBar.SetHealth(hitpoints);
+        healthBarStats.text = GetHealthStats();
     }
     
-    public void IncreaseDamage()
+    public void IncreaseDamage(int damage)
     {
-        gameController.DamageUpPopUp();
-        damage++;
+        gameController.DamageUpPopUp(damage);
+        this.damage++;
+        magicStats.text = Convert.ToString(this.damage);
+    }
+
+    public void IncreaseMana(int extraMana)
+    {
+        gameController.ManaUp(extraMana);
+        playerMaxMana += extraMana;
+        mana += extraMana;
+        manaBar.SetMaxMana(playerMaxMana);
+        manaBar.SetMana(mana);
+        manaBarStats.text = GetManaStats();
+    }
+
+    public void IncreaseSpeed(float speedBonus)
+    {
+        gameController.MovementUp(speedBonus);
+        movementSpeed += speedBonus;
+        movementStats.text = Convert.ToString(movementSpeed);
     }
 
     private void SaveActions()
@@ -180,9 +219,10 @@ public class Character2DController : MonoBehaviour
             // Update mana
             mana--;
             manaBar.SetMana(mana);
+            manaBarStats.text = GetManaStats();
             // Update the flag
             shoot = false;
-            // SOund effect
+            // Sound effect
             audioManager.Play("Kamehada2");
         }
     }
@@ -199,9 +239,19 @@ public class Character2DController : MonoBehaviour
             {
                 mana++;
                 manaBar.SetMana(mana);
+                manaBarStats.text = GetManaStats();
                 timeManaCharging = 0;
             }
         }
+    }
 
+    private string GetHealthStats()
+    {
+        return hitpoints + " / " + playerMaxHealth;
+    }
+
+    private string GetManaStats()
+    {
+        return mana + " / " + playerMaxMana;
     }
 }

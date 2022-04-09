@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HpRecovery : MonoBehaviour
 {
-    [SerializeField] private int recoverHealth;
+    [SerializeField] private int recoverHealth = 1;
 
     private void OnTriggerEnter2D(Collider2D col)
     {

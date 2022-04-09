@@ -45,19 +45,31 @@ public class GameController : MonoBehaviour
         gameOverScreen.Setup();
     }
 
-    public void DamageUpPopUp()
+    public void DamageUpPopUp(int damage)
     {
         audioManager.Play("DmgUp");
-        popUpWindow.ActivatePopUp("Damage Up!");
+        popUpWindow.ActivatePopUp("Damage up by " + damage + "!");
     }
     
-    public void HealthRecoverPopUp() {
+    public void HealthRecoverPopUp(int health) {
         audioManager.Play("HealthRecover");
-        popUpWindow.ActivatePopUp("You feel more healthy");
+        popUpWindow.ActivatePopUp(health + " health recovered");
     }
     
-    public void HealthUpPopUp() {
+    public void HealthUpPopUp(int health) {
         audioManager.Play("HealthUp");
-        popUpWindow.ActivatePopUp("Max HP increased!");
+        popUpWindow.ActivatePopUp("Max HP increased by " + health + "!");
+    }
+
+    public void ManaUp(int mana)
+    {
+        audioManager.Play("ManaUp");
+        popUpWindow.ActivatePopUp("Max mana increased by " + mana + "!");
+    }
+
+    public void MovementUp(float movement)
+    {
+        audioManager.Play("SpeedUp");
+        popUpWindow.ActivatePopUp("Movement speed increased by " + movement + "!");
     }
 }

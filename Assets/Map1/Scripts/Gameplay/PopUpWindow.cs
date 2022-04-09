@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PopUpWindow : MonoBehaviour
 {
 
-    [SerializeField] private Text text;
+    [SerializeField] private TextMeshProUGUI text;
     private float timer = 0;
     [SerializeField] private float popUpLifeSpan = 1f;
     private bool active = false;

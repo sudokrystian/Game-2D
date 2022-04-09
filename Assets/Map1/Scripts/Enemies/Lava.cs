@@ -27,7 +27,6 @@ public class Lava : MonoBehaviour
     
     private void CreateLavaProjectile()
     {
-        print("Creating lava projectile");
         // Make sure that the z is correct so the object is visible during the gameplay
         float z = 1;
         Vector3 projectilePosition = new Vector3(lavaSpawn.position.x, lavaSpawn.position.y, z);

@@ -12,17 +12,17 @@ public class GameController : MonoBehaviour
     // Camera behaviour
     [SerializeField] private Transform followObject;
     // Game over behaviour
-    [SerializeField] private GameOverScreen GameOverScreen;
+    [SerializeField] private GameOverScreen gameOverScreen;
     // Pop up windows
     [SerializeField] private PopUpWindow popUpWindow;
     // Y offset of the camera
-    [SerializeField] private float mainCameraYOffset = 4;
+    [SerializeField] private float mainCameraYOffset = 1.3f;
     
-    private Camera MainCamera;
+    private Camera mainCamera;
 
     private void Start()
     {
-        MainCamera = Camera.main;   
+        mainCamera = Camera.main;   
     }
 
     private void Update()
@@ -36,13 +36,13 @@ public class GameController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MainCamera.transform.position =
+        mainCamera.transform.position =
             new Vector3(followObject.position.x, followObject.position.y + mainCameraYOffset, this.transform.position.z);
     }
     
     public void GameOver()
     {
-        GameOverScreen.Setup();
+        gameOverScreen.Setup();
     }
 
     public void DamageUpPopUp()

@@ -27,6 +27,11 @@ public class LavaProjectile : MonoBehaviour
             audioManager.Play("LavaProjectile");
             player.TakeHit(lavaDamage);
         }
-        Destroy(gameObject);
+
+        var lava = collision.collider.GetComponent<Lava>();
+        if (!lava)
+        {
+            Destroy(gameObject);
+        }
     }
 }

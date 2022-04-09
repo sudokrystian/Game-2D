@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BirdBomber : MonoBehaviour
 {
+    public EnemyStats enemyStats;
     public BirdEgg projectile;
     public Transform projectileSpawn;
     [SerializeField] private float bombTimer = 2f;
@@ -20,6 +21,7 @@ public class BirdBomber : MonoBehaviour
         // Make sure that the z is correct so the object is visible during the gameplay
         float z = 1;
         Vector3 projectilePosition = new Vector3(projectileSpawn.position.x, projectileSpawn.position.y, z);
-        Instantiate(projectile, projectilePosition, projectileSpawn.rotation);
+        var egg = Instantiate(projectile, projectilePosition, projectileSpawn.rotation);
+        egg.EggDamage = enemyStats.EnemyDamage;
     }
 }

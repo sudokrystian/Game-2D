@@ -7,7 +7,7 @@ public class BirdEgg : MonoBehaviour
 {
     public GameObject eggProjectile;
     [SerializeField] private float eggSpeed = 6f;
-    [SerializeField] private int eggDamage = 2;
+    private int eggDamage = 2;
     // Audio manager
     public AudioManager audioManager;
     void Update()
@@ -24,5 +24,11 @@ public class BirdEgg : MonoBehaviour
             player.TakeHit(eggDamage);
         }
         Destroy(gameObject);
+    }
+
+    public int EggDamage
+    {
+        get => eggDamage;
+        set => eggDamage = value;
     }
 }

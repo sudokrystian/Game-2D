@@ -15,7 +15,7 @@ public class ProjectileBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         // Enemy hit
-        var enemy = col.collider.GetComponent<EnemyBehaviour>();
+        var enemy = col.collider.GetComponent<EnemyStats>();
         if (enemy)
         {
 

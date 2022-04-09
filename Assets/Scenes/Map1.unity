@@ -13810,7 +13810,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13873,12 +13873,12 @@ Tilemap:
     m_Data: {fileID: -6045269988124551188, guid: 157cbc340d2b7e64ab85168e80e95550, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 517cd6f480a88a743a4fa39ebf73f71e, type: 3}
-  - m_RefCount: 5
-    m_Data: {fileID: -8022950323857649113, guid: 157cbc340d2b7e64ab85168e80e95550, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 5
+    m_Data: {fileID: -8022950323857649113, guid: 157cbc340d2b7e64ab85168e80e95550, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 517cd6f480a88a743a4fa39ebf73f71e, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1147
     m_Data:
@@ -22334,6 +22334,10 @@ PrefabInstance:
       value: -0.0688467
       objectReference: {fileID: 0}
     - target: {fileID: 8270766331964254500, guid: c9f10802f959fb84fbac2d80c208fb2e, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8270766331964254500, guid: c9f10802f959fb84fbac2d80c208fb2e, type: 3}
       propertyPath: magicStats
       value: 
       objectReference: {fileID: 1627811914}
@@ -22361,6 +22365,14 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1857318787}
+    - target: {fileID: 8270766331964254501, guid: c9f10802f959fb84fbac2d80c208fb2e, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8270766331964254501, guid: c9f10802f959fb84fbac2d80c208fb2e, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8270766332623490180, guid: c9f10802f959fb84fbac2d80c208fb2e, type: 3}
       propertyPath: m_Camera
       value: 

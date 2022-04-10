@@ -12,6 +12,9 @@ public class ProjectileBehaviour : MonoBehaviour
     private bool down;
     private bool horizontal;
     private Vector2 startingPosition;
+   
+    public GameObject destroyedBullet;
+
 
     private void Start()
     {
@@ -22,7 +25,7 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         if (Vector2.Distance(startingPosition, transform.position) > bulletRange)
         {
-            Destroy(gameObject);
+            DestroyTheBullet();
         }
 
         if (up)
@@ -58,8 +61,12 @@ public class ProjectileBehaviour : MonoBehaviour
         {
             box.TakeDamage(bulletDamage);
         }
-
-        Destroy(gameObject, 0.01f);
+        DestroyTheBullet();
+    }
+    
+    private void DestroyTheBullet() {
+        Instantiate(destroyedBullet, gameObject.transform.position, gameObject.transform.rotation);
+        Destroy(gameObject);
     }
 
 

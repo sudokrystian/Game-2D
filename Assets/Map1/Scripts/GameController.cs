@@ -25,16 +25,7 @@ public class GameController : MonoBehaviour
         mainCamera = Camera.main;   
         audioManager = FindObjectOfType<AudioManager>();
     }
-
-    private void Update()
-    {
-        // if (Input.GetButtonDown("Cancel"))
-        // {
-        //     // SceneManager.LoadScene(0);
-        // }
-    }
-
-
+    
     private void FixedUpdate()
     {
         mainCamera.transform.position =

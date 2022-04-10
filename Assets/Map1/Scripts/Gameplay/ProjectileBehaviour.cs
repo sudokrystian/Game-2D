@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class ProjectileBehaviour : MonoBehaviour
@@ -7,6 +8,9 @@ public class ProjectileBehaviour : MonoBehaviour
     private float bulletSpeed = 6f;
     private int bulletDamage = 1;
     [SerializeField] private float bulletRange = 7f;
+    private bool up;
+    private bool down;
+    private bool horizontal;
     private Vector2 startingPosition;
 
     private void Start()
@@ -20,7 +24,24 @@ public class ProjectileBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        transform.position += -transform.right * Time.deltaTime * bulletSpeed;
+
+        if (up)
+        {
+            transform.position += transform.up * Time.deltaTime * bulletSpeed;
+
+        }
+
+        if (horizontal)
+        {
+            transform.position += -transform.right * Time.deltaTime * bulletSpeed;
+
+        }
+
+        if (down)
+        {
+            transform.position += -transform.up * Time.deltaTime * bulletSpeed;
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -46,5 +67,20 @@ public class ProjectileBehaviour : MonoBehaviour
     public void SetDamage(int dmg)
     {
         this.bulletDamage = dmg;
+    }
+
+    public void Horizontal()
+    {
+        horizontal = true;
+    }
+
+    public void Up()
+    {
+        up = true;
+    }
+
+    public void Down()
+    {
+        down = true;
     }
 }

@@ -29,6 +29,8 @@ public class Character2DController : MonoBehaviour
     private float horizontalMove = 0;
     private bool jump = false;
     private bool shoot = false;
+    private bool lookingUp = false;
+    private bool lookingDown = false;
 
     // Player base stats
     [SerializeField] private int playerMaxHealth = 8;
@@ -43,7 +45,10 @@ public class Character2DController : MonoBehaviour
 
     //Bullets
     [SerializeField] private ProjectileBehaviour projectilePrefab;
-    [SerializeField] private Transform launchOffset;
+    [SerializeField] private Transform horizontalLaunchOffset;
+    [SerializeField] private Transform upLaunchOffset;
+    [SerializeField] private Transform downLaunchOffset;
+
     
     //Mana timer
     private float timeManaCharging = 0;
@@ -163,6 +168,22 @@ public class Character2DController : MonoBehaviour
     {
         float horizontalMove = Input.GetAxisRaw("Horizontal");
         this.horizontalMove = horizontalMove;
+        float verticalAxis = Input.GetAxisRaw("Vertical");
+        if (verticalAxis > 0)
+        {
+            lookingUp = true;
+            lookingDown = true;
+        }
+        else if (verticalAxis < 0)
+        {
+            lookingDown = true;
+            lookingUp = false;
+        }
+        else
+        {
+            lookingUp = false;
+            lookingDown = false;
+        }
         
         if (Input.GetButtonDown("Jump") && Mathf.Abs(rigidBody.velocity.y) < 0.001f)
         {
@@ -215,8 +236,23 @@ public class Character2DController : MonoBehaviour
 
         if (shoot)
         {
-            // Create a bullet
-            ProjectileBehaviour bullet = Instantiate(projectilePrefab, launchOffset.position, Quaternion.Inverse(transform.rotation));
+            // Create a bullet up, down or horizontal
+            ProjectileBehaviour bullet;
+            if (lookingUp)
+            {
+                bullet = Instantiate(projectilePrefab, upLaunchOffset.position, Quaternion.Inverse(transform.rotation));
+                bullet.Up();
+            }
+            else if(lookingDown)
+            {
+                bullet = Instantiate(projectilePrefab, downLaunchOffset.position, Quaternion.Inverse(transform.rotation));
+                bullet.Down();
+            }
+            else
+            {
+                bullet = Instantiate(projectilePrefab, horizontalLaunchOffset.position, Quaternion.Inverse(transform.rotation));
+                bullet.Horizontal();
+            }
             bullet.SetDamage(damage);
             // Update mana
             mana--;

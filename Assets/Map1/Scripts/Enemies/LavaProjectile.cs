@@ -9,13 +9,15 @@ public class LavaProjectile : MonoBehaviour
     private Rigidbody2D rigidBody;
     [SerializeField] private int lavaDamage = 3;
     [SerializeField] private float impulseForce = 9f;
+
+    private float spawnArc;
     // Audio manager
     private AudioManager audioManager;
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
-        var x = Random.Range(-3f, 3f);
+        var x = Random.Range(-spawnArc, spawnArc);
         rigidBody.AddForce(new Vector2(x, impulseForce), ForceMode2D.Impulse);
 
     }
@@ -43,5 +45,11 @@ public class LavaProjectile : MonoBehaviour
         {
             Physics2D.IgnoreCollision(lava.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
         }
+    }
+
+    public float SpawnArc
+    {
+        get => spawnArc;
+        set => spawnArc = value;
     }
 }

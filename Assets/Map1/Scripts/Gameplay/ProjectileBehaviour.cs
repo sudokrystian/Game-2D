@@ -6,9 +6,20 @@ public class ProjectileBehaviour : MonoBehaviour
     // Stats
     private float bulletSpeed = 6f;
     private int bulletDamage = 1;
+    [SerializeField] private float bulletRange = 7f;
+    private Vector2 startingPosition;
+
+    private void Start()
+    {
+        startingPosition = transform.position;
+    }
 
     private void Update()
     {
+        if (Vector2.Distance(startingPosition, transform.position) > bulletRange)
+        {
+            Destroy(gameObject);
+        }
         transform.position += -transform.right * Time.deltaTime * bulletSpeed;
     }
 
@@ -18,7 +29,6 @@ public class ProjectileBehaviour : MonoBehaviour
         var enemy = col.collider.GetComponent<EnemyStats>();
         if (enemy)
         {
-
             enemy.TakeHit(bulletDamage);
         }
         // Box hit

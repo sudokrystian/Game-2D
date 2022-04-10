@@ -9,7 +9,7 @@ public class Character2DController : MonoBehaviour
 
 {
     // Game Controller
-    [SerializeField] private GameController gameController;
+    private GameController gameController;
     // Audio
     private AudioManager audioManager;
 
@@ -59,6 +59,7 @@ public class Character2DController : MonoBehaviour
     private void Start()
     {
         // Initialize values
+        gameController = FindObjectOfType<GameController>();
         rigidBody = GetComponent<Rigidbody2D>();
         audioManager = FindObjectOfType<AudioManager>();
         animator = playerGFX.GetComponent<Animator>();

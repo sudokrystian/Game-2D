@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,6 +36,15 @@ public class EnemyStats : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         hitpoints = enemyMaxHealth;
         healthBar.SetMaxHealth(enemyMaxHealth);
+        healthBar.gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (!healthBar.gameObject.activeInHierarchy && hitpoints < enemyMaxHealth)
+        {
+            healthBar.gameObject.SetActive(true);
+        }
     }
 
     public Rigidbody2D RigidBody => rigidBody;
@@ -90,6 +100,8 @@ public class EnemyStats : MonoBehaviour
             {
                 Instantiate(drop, gameObject.transform.position, Quaternion.Inverse(transform.rotation));
             }
+            audioManager.DetachAudioSource(hitSound);
+            audioManager.DetachAudioSource(deathSound);
             Destroy(gameObject);
         }
     }

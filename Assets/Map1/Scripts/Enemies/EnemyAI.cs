@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
     // Enemy flags
     [SerializeField] private bool canFly = false;
     private bool canJump = false;
+    private bool agitated = false;
     private bool confused = false;
     private Vector2 randomDirection;
 
@@ -85,7 +86,12 @@ public class EnemyAI : MonoBehaviour
         float distanceFromPlayer = Vector2.Distance(enemyStats.RigidBody.position, target.position);
         if (distanceFromPlayer < visionRange)
         {
+            agitated = true;
             enemyStats.RigidBody.AddForce(force);
+        }
+        else
+        {
+            agitated = false;
         }
 
         float distance = Vector2.Distance(enemyStats.RigidBody.position, path.vectorPath[currentWaypoint]);
@@ -115,6 +121,7 @@ public class EnemyAI : MonoBehaviour
         float distanceFromPlayer = Vector2.Distance(enemyStats.RigidBody.position, target.position);
         if (distanceFromPlayer < visionRange)
         {
+            agitated = true;
             // If the enemy is above you and you can jump let's jump
             if (path.vectorPath[currentWaypoint].y > (enemyStats.RigidBody.position.y + 1f) && canJump)
             {
@@ -144,6 +151,10 @@ public class EnemyAI : MonoBehaviour
                     enemyStats.RigidBody.AddForce(alternativeForce);
                 }
             }
+        }
+        else
+        {
+            agitated = false;
         }
 
         float distance = Vector2.Distance(enemyStats.RigidBody.position, path.vectorPath[currentWaypoint]);
@@ -192,4 +203,6 @@ public class EnemyAI : MonoBehaviour
             canJump = true;
         }
     }
+
+    public bool Agitated => agitated;
 }

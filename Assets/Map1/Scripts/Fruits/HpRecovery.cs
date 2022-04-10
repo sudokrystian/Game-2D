@@ -7,9 +7,9 @@ public class HpRecovery : MonoBehaviour
 {
     [SerializeField] private int recoverHealth = 1;
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        var player = col.GetComponent<Character2DController>();
+        var player = col.collider.GetComponent<Character2DController>();
         if (player)
         {
             player.RecoverHealth(recoverHealth);

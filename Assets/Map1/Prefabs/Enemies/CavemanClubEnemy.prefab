@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 2592507581641207064}
   - component: {fileID: 2592507581641207065}
   - component: {fileID: 5663192961810498747}
-  - component: {fileID: 3005268580278119435}
+  - component: {fileID: 5958403899825890751}
   m_Layer: 0
   m_Name: CavemanClubEnemy
   m_TagString: Untagged
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyGFX: {fileID: 2920895753803547808}
---- !u!114 &3005268580278119435
+--- !u!114 &5958403899825890751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -402,12 +402,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8102448590866702144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 719de7d8a7c97d9448a771c07f8b6689, type: 3}
+  m_Script: {fileID: 11500000, guid: ecd1edf4e4cfc6b43a27d676b1be6683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canFly: 0
   patrollingRange: 0.4
+  timeWaitingThreshold: 1
   enemyStats: {fileID: 2592507581641207065}
+  enemyAI: {fileID: 2592507581641207064}
 --- !u!1 &8102448590973540419
 GameObject:
   m_ObjectHideFlags: 0

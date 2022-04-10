@@ -1,18 +1,34 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ReadingBoard : MonoBehaviour
 {
-    private GameController gameController;
-    private void Start()
+    public PopUpWindow popUpWindow;
+    [SerializeField] private string bilboardMessage = "Message";
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameController = FindObjectOfType<GameController>();
+        var player = collision.GetComponent<Character2DController>();
+        if (player)
+        {
+            popUpWindow.ActivatePopUp(bilboardMessage);
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        throw new NotImplementedException();
+        popUpWindow.DisablePopUp();
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        var player = collision.collider.GetComponent<Character2DController>();
+        if (player)
+        {
+            popUpWindow.ActivatePopUp(bilboardMessage);
+        }
     }
 }

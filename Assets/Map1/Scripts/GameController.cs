@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,7 +18,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private PopUpWindow popUpWindow;
     // Y offset of the camera
     [SerializeField] private float mainCameraYOffset = 1.3f;
-    
+
     private Camera mainCamera;
 
     private void Start()
@@ -40,28 +41,29 @@ public class GameController : MonoBehaviour
     public void DamageUpPopUp(int damage)
     {
         audioManager.Play("DmgUp");
-        popUpWindow.ActivatePopUp("Damage up by " + damage + "!");
+        popUpWindow.ActivatePopUpWithTimer("Damage up by " + damage + "!");
     }
     
     public void HealthRecoverPopUp(int health) {
         audioManager.Play("HealthRecover");
-        popUpWindow.ActivatePopUp(health + " health recovered");
+        popUpWindow.ActivatePopUpWithTimer(health + " health recovered");
     }
     
     public void HealthUpPopUp(int health) {
         audioManager.Play("HealthUp");
-        popUpWindow.ActivatePopUp("Max HP increased by " + health + "!");
+        popUpWindow.ActivatePopUpWithTimer("Max HP increased by " + health + "!");
     }
 
     public void ManaUp(int mana)
     {
         audioManager.Play("ManaUp");
-        popUpWindow.ActivatePopUp("Max mana increased by " + mana + "!");
+        popUpWindow.ActivatePopUpWithTimer("Max mana increased by " + mana + "!");
     }
 
     public void MovementUp(float movement)
     {
         audioManager.Play("SpeedUp");
-        popUpWindow.ActivatePopUp("Movement speed increased by " + movement + "!");
+        popUpWindow.ActivatePopUpWithTimer("Movement speed increased by " + movement + "!");
     }
+
 }

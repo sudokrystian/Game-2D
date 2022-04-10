@@ -11,11 +11,11 @@ public class PopUpWindow : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     private float timer = 0;
     [SerializeField] private float popUpLifeSpan = 1f;
-    private bool active = false;
+    private bool timerActive = false;
 
     private void Update()
     {
-        if (active)
+        if (timerActive)
         {
             if (timer < popUpLifeSpan)
             {
@@ -25,17 +25,34 @@ public class PopUpWindow : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 timer = 0f;
-                active = false;
+                timerActive = false;
             }
         }
        
     }
 
-    public void ActivatePopUp(string text)
+    public void ActivatePopUpWithTimer(string text)
     {
         this.text.text = text;
         gameObject.SetActive(true);
-        active = true;
+        timerActive = true;
+    }
+    
+    public void ActivatePopUp(string text)
+    {
+        if (!timerActive && !gameObject.activeSelf)
+        {
+            this.text.text = text;
+            gameObject.SetActive(true);
+        }
+    }
+
+    public void DisablePopUp()
+    {
+        if (!timerActive)
+        {
+            gameObject.SetActive(false);
+        }
     }
     
 }

@@ -23,8 +23,6 @@ public class Character2DController : MonoBehaviour
     private TextMeshProUGUI healthBarStats;
     private TextMeshProUGUI manaBarStats;
 
-
-
     // Player actions
     private float horizontalMove = 0;
     private bool jump = false;
@@ -38,6 +36,7 @@ public class Character2DController : MonoBehaviour
     [SerializeField] private float jumpForce = 7f;
     [SerializeField] private int playerMaxMana = 5;
     [SerializeField] private float manaRegenerationCooldown = 2.2f;
+    [SerializeField] private float bulletChargingCooldown = 0.4f;
 
     private int damage = 1;
     private int hitpoints;
@@ -49,8 +48,12 @@ public class Character2DController : MonoBehaviour
     [SerializeField] private Transform upLaunchOffset;
     [SerializeField] private Transform downLaunchOffset;
 
+    // Bullet timer
+    private bool canShoot = true;
+    private float timeBulletCharging = 0;
     
-    //Mana timer
+    // Mana timer
+    private bool manaCharged = false;
     private float timeManaCharging = 0;
     
     // Animations
@@ -84,13 +87,14 @@ public class Character2DController : MonoBehaviour
 
     private void Update()
     {
+        BulletCharging();
         SaveActions();
+        ManaCharging();
     }
 
     private void FixedUpdate()
     {
         PerformActions();
-        ManaCharging();
     }
 
     public void TakeHit(int damage)
@@ -191,7 +195,7 @@ public class Character2DController : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1"))
         {
-            if (mana > 0)
+            if (mana > 0 && canShoot)
             {
                 shoot = true;
             }
@@ -236,6 +240,7 @@ public class Character2DController : MonoBehaviour
 
         if (shoot)
         {
+            canShoot = false;
             // Create a bullet up, down or horizontal
             ProjectileBehaviour bullet;
             if (lookingUp)
@@ -263,22 +268,47 @@ public class Character2DController : MonoBehaviour
             // Sound effect
             audioManager.Play("Kamehada2");
         }
-    }
 
+        if (manaCharged)
+        {
+            mana++;
+            manaBar.SetMana(mana);
+            manaBarStats.text = GetManaStats();
+            manaCharged = false;
+        }
+    }
+    
+    private void BulletCharging()
+    {
+        if (!canShoot)
+        {
+            if (timeBulletCharging < bulletChargingCooldown)
+            {
+                timeBulletCharging += Time.deltaTime;
+            }
+            else
+            {
+                canShoot = true;
+                timeBulletCharging = 0;
+            }
+        }
+    }
+    
     private void ManaCharging()
     {
-        if (timeManaCharging < manaRegenerationCooldown)
+        if (!manaCharged)
         {
-            timeManaCharging += Time.deltaTime;
-        }
-        else
-        {
-            if (mana < playerMaxMana)
+            if (timeManaCharging < manaRegenerationCooldown)
             {
-                mana++;
-                manaBar.SetMana(mana);
-                manaBarStats.text = GetManaStats();
-                timeManaCharging = 0;
+                timeManaCharging += Time.deltaTime;
+            }
+            else
+            {
+                if (mana < playerMaxMana)
+                {
+                    timeManaCharging = 0;
+                    manaCharged = true;
+                }
             }
         }
     }

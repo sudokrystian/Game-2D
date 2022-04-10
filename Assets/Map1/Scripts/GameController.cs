@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private PopUpWindow popUpWindow;
     // Y offset of the camera
     [SerializeField] private float mainCameraYOffset = 1.3f;
-
+    
     private Camera mainCamera;
 
     private void Start()
@@ -37,7 +37,6 @@ public class GameController : MonoBehaviour
     {
         gameOverScreen.Setup();
     }
-
     public void DamageUpPopUp(int damage)
     {
         audioManager.Play("DmgUp");

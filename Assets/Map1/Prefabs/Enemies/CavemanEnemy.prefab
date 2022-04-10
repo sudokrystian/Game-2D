@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 4487430453588290028}
   - component: {fileID: 4487430453588290029}
   - component: {fileID: 8479783325637449021}
+  - component: {fileID: -8632538103788695959}
   m_Layer: 0
   m_Name: CavemanEnemy
   m_TagString: Untagged
@@ -258,6 +259,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyGFX: {fileID: 7911469099624675346}
+--- !u!114 &-8632538103788695959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912067809098865588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719de7d8a7c97d9448a771c07f8b6689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFly: 0
+  patrollingRange: 0.4
+  enemyStats: {fileID: 4487430453588290029}
 --- !u!1 &7912067809340480695
 GameObject:
   m_ObjectHideFlags: 0

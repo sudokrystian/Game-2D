@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 8630469704286404365}
   - component: {fileID: 5620820908048742123}
   - component: {fileID: 5620820908048742122}
+  - component: {fileID: -3804158401440993894}
   m_Layer: 0
   m_Name: Eagle
   m_TagString: Untagged
@@ -389,9 +390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 5620820908048742122}
-  visionRange: 10
+  visionRange: 9
   canFly: 1
-  target: {fileID: 0}
   nextWaypointDistance: 0.5
 --- !u!114 &5620820908048742122
 MonoBehaviour:
@@ -414,6 +414,21 @@ MonoBehaviour:
   jumpForce: 1
   drop: {fileID: 7428563576888346620, guid: 68f0d5036f6491d46862371794050f48, type: 3}
   dropChance: 0.1
+--- !u!114 &-3804158401440993894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8630469704286404367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719de7d8a7c97d9448a771c07f8b6689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFly: 1
+  patrollingRange: 2.4
+  enemyStats: {fileID: 5620820908048742122}
 --- !u!1 &8630469704942584948
 GameObject:
   m_ObjectHideFlags: 0

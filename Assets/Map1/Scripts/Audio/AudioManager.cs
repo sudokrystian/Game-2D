@@ -39,7 +39,9 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play(themeTitle);
+        AudioSource audioSource = Array.Find(sounds, sound => sound.name == themeTitle).audioSource;
+        audioSource.loop = true;
+        audioSource.Play();
     }
 
     public void Play(string name)

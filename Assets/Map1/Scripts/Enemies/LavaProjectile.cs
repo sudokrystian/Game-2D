@@ -15,7 +15,7 @@ public class LavaProjectile : MonoBehaviour
     {
         audioManager = FindObjectOfType<AudioManager>();
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
-        var x = Random.Range(-5f, 5f);
+        var x = Random.Range(-3f, 3f);
         rigidBody.AddForce(new Vector2(x, impulseForce), ForceMode2D.Impulse);
 
     }

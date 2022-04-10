@@ -35,7 +35,7 @@ public class Character2DController : MonoBehaviour
     [SerializeField] private float movementSpeed = 4f;
     [SerializeField] private float jumpForce = 7f;
     [SerializeField] private int playerMaxMana = 5;
-    [SerializeField] private float manaRegenerationCooldown = 3f;
+    [SerializeField] private float manaRegenerationCooldown = 2.2f;
 
     private int damage = 1;
     private int hitpoints;
@@ -106,7 +106,6 @@ public class Character2DController : MonoBehaviour
 
     public void RecoverHealth(int extraHealth)
     {
-        gameController.HealthRecoverPopUp(extraHealth);
         if (hitpoints != playerMaxHealth)
         {
             if ((hitpoints + extraHealth) > playerMaxHealth)
@@ -117,6 +116,7 @@ public class Character2DController : MonoBehaviour
             }
             else
             {
+                gameController.HealthRecoverPopUp(extraHealth);
                 hitpoints += extraHealth;
                 healthBar.SetHealth(hitpoints);
                 healthBarStats.text = GetHealthStats();

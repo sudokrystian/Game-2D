@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 7912067809098865590}
   - component: {fileID: 4487430453588290028}
   - component: {fileID: 4487430453588290029}
+  - component: {fileID: 8479783325637449021}
   m_Layer: 0
   m_Name: CavemanEnemy
   m_TagString: Untagged
@@ -221,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 4487430453588290029}
   visionRange: 8
-  target: {fileID: 0}
+  canFly: 0
   nextWaypointDistance: 1
 --- !u!114 &4487430453588290029
 MonoBehaviour:
@@ -241,8 +242,22 @@ MonoBehaviour:
   enemySpeed: 380
   enemyMaxHealth: 6
   enemyDamage: 1
+  jumpForce: 4
   drop: {fileID: 8108562422423784745, guid: 1b9d5dd946a742e4e801f0e0d783ac1b, type: 3}
   dropChance: 0.15
+--- !u!114 &8479783325637449021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912067809098865588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb9ed02b69a79c4bbae931217498530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyGFX: {fileID: 7911469099624675346}
 --- !u!1 &7912067809340480695
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +709,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4209173254980968, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.091
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547818169220994, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212261718290802300, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
 --- !u!4 &7909319671348601236 stripped
@@ -701,3 +728,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4155694850387958, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
   m_PrefabInstance: {fileID: 7912067810352959074}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7911469099624675346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1795478270228080, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+  m_PrefabInstance: {fileID: 7912067810352959074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6580814573675625198
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911469099624675346}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c97bf44dfb9ec4448a87918d20d25966, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

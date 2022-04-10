@@ -28,7 +28,7 @@ public class ProjectileBehaviour : MonoBehaviour
             box.TakeDamage(bulletDamage);
         }
 
-        Destroy(gameObject);
+        Destroy(gameObject, 0.01f);
     }
 
 

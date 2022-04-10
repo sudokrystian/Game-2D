@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 8102448590866702146}
   - component: {fileID: 2592507581641207064}
   - component: {fileID: 2592507581641207065}
+  - component: {fileID: 5663192961810498747}
   m_Layer: 0
   m_Name: CavemanClubEnemy
   m_TagString: Untagged
@@ -355,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 2592507581641207065}
   visionRange: 10
-  target: {fileID: 0}
+  canFly: 0
   nextWaypointDistance: 1
 --- !u!114 &2592507581641207065
 MonoBehaviour:
@@ -375,8 +376,22 @@ MonoBehaviour:
   enemySpeed: 380
   enemyMaxHealth: 7
   enemyDamage: 3
+  jumpForce: 4
   drop: {fileID: 8106377224569329082, guid: 23fc78cb7bdf3a743820ec7a3aa296da, type: 3}
   dropChance: 0.7
+--- !u!114 &5663192961810498747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102448590866702144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb9ed02b69a79c4bbae931217498530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyGFX: {fileID: 2920895753803547808}
 --- !u!1 &8102448590973540419
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +665,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyGFX
       objectReference: {fileID: 0}
+    - target: {fileID: 4254984372232294, guid: e333f712e0f4cd54694dff55e08610dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.439
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286224537933860, guid: e333f712e0f4cd54694dff55e08610dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.162
+      objectReference: {fileID: 0}
     - target: {fileID: 4394043916320050, guid: e333f712e0f4cd54694dff55e08610dc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -694,6 +717,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4640315786684742, guid: e333f712e0f4cd54694dff55e08610dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822738391250826, guid: e333f712e0f4cd54694dff55e08610dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.407
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e333f712e0f4cd54694dff55e08610dc, type: 3}
 --- !u!4 &2918334258611693616 stripped
@@ -701,3 +732,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4394043916320050, guid: e333f712e0f4cd54694dff55e08610dc, type: 3}
   m_PrefabInstance: {fileID: 2922728233262994690}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2920895753803547808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1837153500598690, guid: e333f712e0f4cd54694dff55e08610dc, type: 3}
+  m_PrefabInstance: {fileID: 2922728233262994690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1282377808354077556
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920895753803547808}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 067e15f0bbde08d42935a2bf27907fe8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

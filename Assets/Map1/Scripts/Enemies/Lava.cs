@@ -7,7 +7,6 @@ public class Lava : MonoBehaviour
     public LavaProjectile lavaProjectile;
     public Transform lavaSpawn;
     [SerializeField] private float lavaTimer = 2.4f;
-    [SerializeField] private float projectileSpawnArcRange = 3;
     private int lavaDamage = 99999;
     // Audio manager
     private AudioManager audioManager;
@@ -38,7 +37,6 @@ public class Lava : MonoBehaviour
         // Make sure that the z is correct so the object is visible during the gameplay
         float z = 1;
         Vector3 projectilePosition = new Vector3(lavaSpawn.position.x, lavaSpawn.position.y, z);
-        lavaProjectile.SpawnArc = projectileSpawnArcRange;
         Instantiate(lavaProjectile, projectilePosition, lavaSpawn.rotation);
     }
 

@@ -9,8 +9,7 @@ public class LavaProjectile : MonoBehaviour
     private Rigidbody2D rigidBody;
     [SerializeField] private int lavaDamage = 3;
     [SerializeField] private float impulseForce = 9f;
-
-    private float spawnArc;
+    [SerializeField] private float spawnArc = 2;
     // Audio manager
     private AudioManager audioManager;
     void Start()

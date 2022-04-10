@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
         mainCamera.transform.position =
             new Vector3(followObject.position.x, followObject.position.y + mainCameraYOffset, -1);
     }
-    
+
     public void GameOver()
     {
         gameOverScreen.Setup();

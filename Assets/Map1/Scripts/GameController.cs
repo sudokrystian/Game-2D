@@ -20,6 +20,11 @@ public class GameController : MonoBehaviour
     [SerializeField] private float mainCameraYOffset = 1.3f;
     
     private Camera mainCamera;
+    
+    // UI animations
+    public Animator loadBulletAnimator;
+    private readonly int loadBulletHash = Animator.StringToHash("LoadBullet");
+
 
     private void Start()
     {
@@ -67,6 +72,17 @@ public class GameController : MonoBehaviour
     {
         audioManager.Play("SpeedUp");
         popUpWindow.ActivatePopUpWithTimer("Movement speed increased by " + movement + "!");
+    }
+
+    public void SetBulletAnimationLength(float bulletChargingTime)
+    {
+        float animationLength = 0.333f;
+        
+        loadBulletAnimator.speed = bulletChargingTime/animationLength;
+    }
+    public void PlayLoadBulletAnimation()
+    {
+        loadBulletAnimator.SetTrigger(loadBulletHash);
     }
 
 }

@@ -62,7 +62,7 @@ public class Character2DController : MonoBehaviour
     private readonly int jumpHash = Animator.StringToHash("Jump");
     private readonly int hitHash = Animator.StringToHash("Hit");
 
-
+    public Animation animation;
     
     private void Start()
     {
@@ -83,6 +83,9 @@ public class Character2DController : MonoBehaviour
         movementStats.text = Convert.ToString(movementSpeed);
         healthBarStats.text = GetHealthStats();
         manaBarStats.text = GetManaStats();
+        // Set the initial length for bullet charging time
+        gameController.SetBulletAnimationLength(bulletChargingCooldown);
+
     }
 
     private void Update()
@@ -240,6 +243,8 @@ public class Character2DController : MonoBehaviour
 
         if (shoot)
         {
+            // Play UI animation
+            gameController.PlayLoadBulletAnimation();
             canShoot = false;
             // Create a bullet up, down or horizontal
             ProjectileBehaviour bullet;

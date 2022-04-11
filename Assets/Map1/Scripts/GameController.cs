@@ -25,6 +25,10 @@ public class GameController : MonoBehaviour
     {
         mainCamera = Camera.main;   
         audioManager = FindObjectOfType<AudioManager>();
+        // Set up collisions rules
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Pick-ups"),LayerMask.NameToLayer("Bullets"), true);
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Pick-ups"),LayerMask.NameToLayer("Enemies"), true);
+        
     }
     
     private void FixedUpdate()

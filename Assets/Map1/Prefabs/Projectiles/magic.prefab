@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2424049040188704569}
   - component: {fileID: -1722077774819627392}
   - component: {fileID: -8678033035739757633}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: magic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4764,7 +4764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419206b3b7510bb48bbfe436175e8567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletSpeed: 6
+  bulletRange: 7
+  destroyedBullet: {fileID: 0}
 --- !u!58 &2424049040188704569
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4811,7 +4812,7 @@ SortingGroup:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_SortingLayerID: 2043196251
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
 --- !u!1 &100002
 GameObject:
@@ -4824,7 +4825,7 @@ GameObject:
   - component: {fileID: 400002}
   - component: {fileID: 19800002}
   - component: {fileID: 19900002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TestParticles_Layered
   m_TagString: Untagged
   m_Icon: {fileID: 0}

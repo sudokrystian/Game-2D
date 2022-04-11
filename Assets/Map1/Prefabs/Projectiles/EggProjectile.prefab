@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1273095088963419352}
   - component: {fileID: 9094147074066185855}
   - component: {fileID: 8843481740094532602}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EggProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,4 +136,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eggProjectile: {fileID: 6699767494941589430}
   eggSpeed: 1
-  audioManager: {fileID: 0}

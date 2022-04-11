@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7784175392742806486}
   - component: {fileID: 7784175392742806480}
   - component: {fileID: 7784175392742806487}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 7784175392755899424}
   - component: {fileID: 7784175392755899431}
   - component: {fileID: 7784175392755899430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EagleGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 7784175393119432749}
   - component: {fileID: 7784175393119432750}
   - component: {fileID: 7784175393119432748}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 6179588408146559692}
   - component: {fileID: 6179588408146559693}
   - component: {fileID: 2510713874822069485}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EagleKing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 7784175393948559153}
   - component: {fileID: 7784175393948559152}
   - component: {fileID: 7784175393948559159}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 7784175394289493915}
   - component: {fileID: 7784175394289493914}
   - component: {fileID: 7784175394289493913}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 7784175394429310463}
   - component: {fileID: 7784175394429310457}
   - component: {fileID: 7784175394429310456}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}

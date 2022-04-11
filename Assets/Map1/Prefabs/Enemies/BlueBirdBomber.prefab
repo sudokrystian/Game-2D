@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3981904918249659773}
   - component: {fileID: 3981904918249659770}
   - component: {fileID: 3981904918249659771}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueBirdBomber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 3981904918410268441}
   - component: {fileID: 3981904918410268440}
   - component: {fileID: 3981904918410268443}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 3981904918456820849}
   - component: {fileID: 3981904918456820848}
   - component: {fileID: 3981904918456820851}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 3981904918799096116}
   - component: {fileID: 3981904918799096117}
   - component: {fileID: 3981904919865836845}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 3981904919149664621}
   - component: {fileID: 3981904919149664619}
   - component: {fileID: 3981904919149664618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BirdGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3981904919204195458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 3981904919388046139}
   - component: {fileID: 3981904919388046137}
   - component: {fileID: 3981904919388046136}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 3981904919731002155}
   - component: {fileID: 3981904919731002153}
   - component: {fileID: 3981904919731002152}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}

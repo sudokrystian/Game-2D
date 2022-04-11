@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7912067808877156396}
   - component: {fileID: 7912067808877156398}
   - component: {fileID: 7912067808877156399}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4487430453588290029}
   - component: {fileID: 8479783325637449021}
   - component: {fileID: 20270723709839811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CavemanEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 7912067809340480651}
   - component: {fileID: 7912067809340480648}
   - component: {fileID: 7912067809340480649}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 7912067809492197817}
   - component: {fileID: 7912067809492197819}
   - component: {fileID: 7912067809492197816}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 7912067809602325924}
   - component: {fileID: 7912067809602325926}
   - component: {fileID: 7912067809602325927}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 7912067809737131574}
   - component: {fileID: 7912067809737131528}
   - component: {fileID: 7912067809737131529}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,9 +678,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7912067809098865591}
     m_Modifications:
+    - target: {fileID: 1100423478303000, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238031345141368, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368916296560260, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581011118984906, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1587667805949502, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694558132200606, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1795478270228080, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
       propertyPath: m_Name
       value: EnemyGFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795478270228080, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807901298880866, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879125976497170, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888882002300122, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900878347637610, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900927570439344, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929739809071540, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991214457561084, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4155694850387958, guid: 2ab8321fe1cca3049b56c26509622067, type: 3}
       propertyPath: m_RootOrder

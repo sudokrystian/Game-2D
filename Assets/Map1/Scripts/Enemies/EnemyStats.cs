@@ -98,7 +98,8 @@ public class EnemyStats : MonoBehaviour
             // Random chance for drops
             if (Random.value < dropChance)
             {
-                Instantiate(drop, gameObject.transform.position, Quaternion.Inverse(transform.rotation));
+                var spawnPosition = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 1);
+                Instantiate(drop, spawnPosition, Quaternion.Inverse(transform.rotation));
             }
             audioManager.DetachAudioSource(hitSound);
             audioManager.DetachAudioSource(deathSound);

@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1400899525674509383}
   - component: {fileID: 2150601996635640835}
   - component: {fileID: 767718641577624710}
-  - component: {fileID: -4808617967430770097}
-  m_Layer: 0
+  - component: {fileID: -8604108558932417067}
+  m_Layer: 10
   m_Name: Cherries
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recoverHealth: 2
---- !u!50 &-4808617967430770097
+--- !u!50 &-8604108558932417067
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

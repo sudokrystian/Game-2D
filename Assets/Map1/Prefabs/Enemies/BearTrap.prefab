@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4138991361083451779}
   - component: {fileID: 3783146572826691577}
   - component: {fileID: 3056543969762718836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BearTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,4 +133,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bearTrapDamage: 3
-  audioManager: {fileID: 0}

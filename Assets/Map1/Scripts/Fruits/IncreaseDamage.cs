@@ -3,17 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IncreaseDamage : MonoBehaviour
+public class IncreaseDamage : Fruit
 {
     [SerializeField] private int damageBonus = 1;
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        var player = col.collider.GetComponent<Character2DController>();
-        if (player)
-        {
-            player.IncreaseDamage(damageBonus);
-            Destroy(gameObject);
-        }
+        PerformActionOnCollision(col, damageBonus);
+    }
+
+    public override void Action(Character2DController player, float actionValue)
+    {
+        player.IncreaseDamage(damageBonus);
     }
 }

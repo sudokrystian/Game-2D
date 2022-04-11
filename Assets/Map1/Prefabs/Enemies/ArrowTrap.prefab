@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8292317743804327158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 8292317744566573562}
   - component: {fileID: 8292317744566573561}
   - component: {fileID: 8292317744566573560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArrowTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8292317744574847572}
   - component: {fileID: 8292317744574847573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArrowTrapGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}

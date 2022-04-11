@@ -106,7 +106,7 @@ MonoBehaviour:
   enemyDamage: 1
   jumpForce: 1
   drop: {fileID: 8108562422423784745, guid: 1b9d5dd946a742e4e801f0e0d783ac1b, type: 3}
-  dropChance: 0.1
+  dropChance: 0.2
 --- !u!114 &3981904918249659771
 MonoBehaviour:
   m_ObjectHideFlags: 0

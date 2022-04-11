@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class Lava : MonoBehaviour
 {
@@ -46,5 +48,6 @@ public class Lava : MonoBehaviour
        audioSource.loop = true;
        audioSource.Play();
     }
-    
+
+
 }

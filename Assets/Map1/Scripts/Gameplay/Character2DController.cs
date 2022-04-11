@@ -61,9 +61,8 @@ public class Character2DController : MonoBehaviour
     private readonly int speedHash = Animator.StringToHash("Speed");
     private readonly int jumpHash = Animator.StringToHash("Jump");
     private readonly int hitHash = Animator.StringToHash("Hit");
+    private readonly int isFallingHash = Animator.StringToHash("IsFalling");
 
-    public Animation animation;
-    
     private void Start()
     {
         // Initialize values
@@ -99,7 +98,7 @@ public class Character2DController : MonoBehaviour
     {
         PerformActions();
     }
-
+    
     public void TakeHit(int damage)
     {
         // Update UI
@@ -194,8 +193,20 @@ public class Character2DController : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && Mathf.Abs(rigidBody.velocity.y) < 0.001f)
         {
+            print("Y velocity: " + rigidBody.velocity.y);
+
             jump = true;
         }
+        if (Mathf.Abs(rigidBody.velocity.y) < 0)
+        {
+            print("Falling");
+            animator.SetBool(isFallingHash, true);
+        }
+        else
+        {
+            animator.SetBool(isFallingHash, false);
+        }
+
         if (Input.GetButtonDown("Fire1"))
         {
             if (mana > 0 && canShoot)

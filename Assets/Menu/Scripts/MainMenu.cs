@@ -23,6 +23,8 @@ public class MainMenu : MonoBehaviour
         }
         audioManager = FindObjectOfType<AudioManager>();
         audioManager.PlayMusic("MenuTheme");
+        audioManager.UpdateMusicVolume();
+        audioManager.UpdateSoundEffectsVolume();
     }
 
     public void PlayGame()

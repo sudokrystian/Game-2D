@@ -42,16 +42,18 @@ public class AudioManager : MonoBehaviour
         }
     }
     
-    public void PlaySoundEffect(string name)
+    public Sound PlaySoundEffect(string name)
     {
         Sound sound = Array.Find(soundEffects, sound => sound.name == name);
         sound.audioSource.Play();
+        return sound;
     }
     
-    public void PlayMusic(string name)
+    public Sound PlayMusic(string name)
     {
         Sound sound = Array.Find(music, sound => sound.name == name);
         sound.audioSource.Play();
+        return sound;
     }
     
     public void StopMusic(string name)

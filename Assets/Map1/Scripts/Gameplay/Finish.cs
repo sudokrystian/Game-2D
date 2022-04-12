@@ -32,6 +32,7 @@ public class Finish : MonoBehaviour
         var player = collider.GetComponent<Character2DController>();
         if (player)
         {
+            print("Finish!");
             WinActions();
         }
     }
@@ -51,6 +52,7 @@ public class Finish : MonoBehaviour
     private void WinActions()
     {
         audioManager.PlaySoundEffect("Win");
+        audioManager.PlaySoundEffect("ItIsWednesday");
         gameRunning = false;
         gameWonText.text = "You win! \nThis run took you " + Math.Round(timer, 2) + " seconds";
         Time.timeScale = 0f;

@@ -210,9 +210,14 @@ public class Character2DController : MonoBehaviour
             {
                 shoot = true;
             }
-            else
+            if(mana < 1)
             {
                 audioManager.PlaySoundEffect("NoMana");
+            }
+
+            if (!canShoot)
+            {
+                audioManager.PlaySoundEffect("BulletNotCharged");
             }
         }
     }

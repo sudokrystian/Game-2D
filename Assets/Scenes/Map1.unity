@@ -30472,6 +30472,11 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     audioSource: {fileID: 0}
+  - name: BulletNotCharged
+    clip: {fileID: 8300000, guid: e506a5580b6c3124180c61d64c7622cb, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
   defaultSpatialBlend: 1
   defaultMaxDistance: 15
 --- !u!4 &1660638394

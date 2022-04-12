@@ -32,7 +32,7 @@ public class EnemyStats : MonoBehaviour
     {
         audioManager = FindObjectOfType<AudioManager>();
         hitSound = audioManager.AttachAudioSourceToGameObject(gameObject, "Hurt");
-        deathSound = audioManager.AttachAudioSourceToGameObject(gameObject, "Disapear");
+        deathSound = audioManager.AttachAudioSourceToGameObject(gameObject, "Disappear");
         rigidBody = GetComponent<Rigidbody2D>();
         hitpoints = enemyMaxHealth;
         healthBar.SetMaxHealth(enemyMaxHealth);

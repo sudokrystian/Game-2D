@@ -154,8 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbb8dbdb508f6b42b74171e1da5be9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaProjectile: {fileID: 5318563703045659188, guid: 3896499aa75fe8f4caa2baf816c4a1d1, type: 3}
+  lavaProjectile: {fileID: 5318563703045659185, guid: 3896499aa75fe8f4caa2baf816c4a1d1, type: 3}
   lavaSpawn: {fileID: 563142877778223227}
+  lavaTimer: 2.4
 --- !u!95 &5673270740046275337
 Animator:
   serializedVersion: 3

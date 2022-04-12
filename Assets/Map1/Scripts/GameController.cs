@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     // Audio manager
-     private AudioManager audioManager;
+    private AudioManager audioManager;
     // Camera behaviour
     [SerializeField] private Transform followObject;
     // Game over behaviour
@@ -33,7 +33,8 @@ public class GameController : MonoBehaviour
         // Set up collisions rules
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Pick-ups"),LayerMask.NameToLayer("Bullets"), true);
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Pick-ups"),LayerMask.NameToLayer("Enemies"), true);
-        
+        // For now there is only one map so let's play the music
+        PlayFirstMapTheme();
     }
     
     private void FixedUpdate()
@@ -48,29 +49,29 @@ public class GameController : MonoBehaviour
     }
     public void DamageUpPopUp(int damage)
     {
-        audioManager.Play("DmgUp");
+        audioManager.PlaySoundEffect("DmgUp");
         popUpWindow.ActivatePopUpWithTimer("Damage up by " + damage + "!");
     }
     
     public void HealthRecoverPopUp(int health) {
-        audioManager.Play("HealthRecover");
+        audioManager.PlaySoundEffect("HealthRecover");
         popUpWindow.ActivatePopUpWithTimer(health + " health recovered");
     }
     
     public void HealthUpPopUp(int health) {
-        audioManager.Play("HealthUp");
+        audioManager.PlaySoundEffect("HealthUp");
         popUpWindow.ActivatePopUpWithTimer("Max HP increased by " + health + "!");
     }
 
     public void ManaUp(int mana)
     {
-        audioManager.Play("ManaUp");
+        audioManager.PlaySoundEffect("ManaUp");
         popUpWindow.ActivatePopUpWithTimer("Max mana increased by " + mana + "!");
     }
 
     public void MovementUp(float movement)
     {
-        audioManager.Play("SpeedUp");
+        audioManager.PlaySoundEffect("SpeedUp");
         popUpWindow.ActivatePopUpWithTimer("Movement speed increased by " + movement + "!");
     }
 
@@ -83,6 +84,11 @@ public class GameController : MonoBehaviour
     public void PlayLoadBulletAnimation()
     {
         loadBulletAnimator.SetTrigger(loadBulletHash);
+    }
+
+    public void PlayFirstMapTheme()
+    {
+        audioManager.PlayMusic("Map1Forest");
     }
 
 }

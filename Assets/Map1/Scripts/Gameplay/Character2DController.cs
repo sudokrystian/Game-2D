@@ -107,10 +107,10 @@ public class Character2DController : MonoBehaviour
         healthBarStats.text = GetHealthStats();
         // Animate being hit
         animator.SetTrigger(hitHash);
-        audioManager.Play("Hurt");
+        audioManager.PlaySoundEffect("Hurt");
         if (hitpoints <= 0)
         {
-            audioManager.Play("Death");
+            audioManager.PlaySoundEffect("Death");
             gameObject.SetActive(false);
             gameController.GameOver();
         }
@@ -193,13 +193,10 @@ public class Character2DController : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && Mathf.Abs(rigidBody.velocity.y) < 0.001f)
         {
-            print("Y velocity: " + rigidBody.velocity.y);
-
             jump = true;
         }
         if (Mathf.Abs(rigidBody.velocity.y) < 0)
         {
-            print("Falling");
             animator.SetBool(isFallingHash, true);
         }
         else
@@ -215,7 +212,7 @@ public class Character2DController : MonoBehaviour
             }
             else
             {
-                audioManager.Play("NoMana");
+                audioManager.PlaySoundEffect("NoMana");
             }
         }
     }
@@ -248,8 +245,8 @@ public class Character2DController : MonoBehaviour
             this.jump = false;
             // Jump animation
             animator.SetTrigger(jumpHash);
-            audioManager.Play("Jump");
-            audioManager.Play("Frog");
+            audioManager.PlaySoundEffect("Jump");
+            audioManager.PlaySoundEffect("Frog");
         }
 
         if (shoot)
@@ -282,7 +279,7 @@ public class Character2DController : MonoBehaviour
             // Update the flag
             shoot = false;
             // Sound effect
-            audioManager.Play("Kamehada2");
+            audioManager.PlaySoundEffect("Kamehada2");
         }
 
         if (manaCharged)

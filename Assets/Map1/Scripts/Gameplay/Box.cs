@@ -29,12 +29,12 @@ public class Box : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        audioManager.Play("BoxHit");
+        audioManager.PlaySoundEffect("BoxHit");
         animator.SetTrigger(hitHash);
         health -= damage;
         if (health <= 0)
         {
-            audioManager.Play("BoxDestroyed");
+            audioManager.PlaySoundEffect("BoxDestroyed");
             animator.SetTrigger(destroyHash);
             Instantiate(boxDrop, gameObject.transform.position, gameObject.transform.rotation);
         }

@@ -21,7 +21,7 @@ public class BirdEgg : MonoBehaviour
         var player = collision.collider.GetComponent<Character2DController>();
         if (player)
         {
-            audioManager.Play("EggCrack");
+            audioManager.PlaySoundEffect("EggCrack");
             player.TakeHit(eggDamage);
         }
         var enemy = collision.collider.GetComponent<EnemyStats>();

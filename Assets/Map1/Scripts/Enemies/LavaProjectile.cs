@@ -26,7 +26,7 @@ public class LavaProjectile : MonoBehaviour
         var player = collision.collider.GetComponent<Character2DController>();
         if (player)
         {
-            audioManager.Play("LavaProjectile");
+            audioManager.PlaySoundEffect("LavaProjectile");
             player.TakeHit(lavaDamage);
         }
         var enemy = collision.collider.GetComponent<EnemyStats>();

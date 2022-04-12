@@ -22,14 +22,14 @@ public class BearTrap : MonoBehaviour
         var player = collision.collider.GetComponent<Character2DController>();
         if (player)
         {
-            audioManager.Play("BearTrap");
+            audioManager.PlaySoundEffect("BearTrap");
             animator.SetTrigger(activateHash);
             player.TakeHit(bearTrapDamage);
         }
         var enemy = collision.collider.GetComponent<EnemyStats>();
         if (enemy)
         {
-            audioManager.Play("BearTrap");
+            audioManager.PlaySoundEffect("BearTrap");
             animator.SetTrigger(activateHash);
             enemy.TakeHit(bearTrapDamage);
         }

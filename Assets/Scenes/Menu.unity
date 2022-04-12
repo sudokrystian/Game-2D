@@ -1999,6 +1999,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2014,6 +2015,37 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3556becfdcb884693e7fd05440f0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music:
+  - name: MenuTheme
+    clip: {fileID: 8300000, guid: c17eea64f3ea8bf40bd3e451003f6a69, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
+  soundEffects:
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: e3df500772d0891499e2ffa2be9d3ff4, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
+  - name: AdjustSlider
+    clip: {fileID: 8300000, guid: f117c2fbe18d5984e98551688b73b6e1, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
+  defaultSpatialBlend: 1
+  defaultMaxDistance: 15
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2580,6 +2612,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 60990114}
+        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5129,6 +5173,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2108294789}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1391618351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5943,7 +5999,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 60990114}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetVolume
+        m_MethodName: SoundEffectsVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7093,7 +7149,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 60990114}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetVolume
+        m_MethodName: MusicVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

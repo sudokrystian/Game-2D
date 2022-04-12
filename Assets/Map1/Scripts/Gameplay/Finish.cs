@@ -11,7 +11,14 @@ public class Finish : MonoBehaviour
     public TextMeshProUGUI gameWonText;
     private bool gameRunning = true;
     private float timer = 0;
-    
+    // Audio
+    private AudioManager audioManager;
+
+    private void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
+
     private void Update()
     {
         if (gameRunning)
@@ -25,10 +32,7 @@ public class Finish : MonoBehaviour
         var player = collider.GetComponent<Character2DController>();
         if (player)
         {
-            gameRunning = false;
-            gameWonText.text = "You win! \nThis run took you " + Math.Round(timer, 2) + " seconds";
-            Time.timeScale = 0f;
-            gameWonScreen.SetActive(true);
+            WinActions();
         }
     }
     
@@ -42,5 +46,14 @@ public class Finish : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+    }
+
+    private void WinActions()
+    {
+        audioManager.PlaySoundEffect("Win");
+        gameRunning = false;
+        gameWonText.text = "You win! \nThis run took you " + Math.Round(timer, 2) + " seconds";
+        Time.timeScale = 0f;
+        gameWonScreen.SetActive(true);
     }
 }

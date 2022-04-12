@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
     }
     
     public void HealthRecoverPopUp(int health) {
-        audioManager.PlaySoundEffect("HealthRecover");
+        audioManager.PlaySoundEffect("Healing");
         popUpWindow.ActivatePopUpWithTimer(health + " health recovered");
     }
     

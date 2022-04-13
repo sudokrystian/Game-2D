@@ -36,21 +36,22 @@ public class Character2DController : MonoBehaviour
     [SerializeField] private float jumpForce = 7f;
     [SerializeField] private int playerMaxMana = 5;
     [SerializeField] private float manaRegenerationCooldown = 2.2f;
-    [SerializeField] private float bulletChargingCooldown = 0.4f;
+    [SerializeField] private float magicChargingCooldown = 0.4f;
+    [SerializeField] private float magicRange = 6f;
 
     private int damage = 1;
     private int hitpoints;
     private int mana;
 
     //Bullets
-    [SerializeField] private ProjectileBehaviour projectilePrefab;
+    [SerializeField] private PlayerMagic magicPrefab;
     [SerializeField] private Transform horizontalLaunchOffset;
     [SerializeField] private Transform upLaunchOffset;
     [SerializeField] private Transform downLaunchOffset;
 
     // Bullet timer
     private bool canShoot = true;
-    private float timeBulletCharging = 0;
+    private float timeMagicCharging = 0;
     
     // Mana timer
     private bool manaCharged = false;
@@ -87,7 +88,7 @@ public class Character2DController : MonoBehaviour
         healthBarStats.text = GetHealthStats();
         manaBarStats.text = GetManaStats();
         // Set the initial length for bullet charging time
-        gameController.SetBulletAnimationLength(bulletChargingCooldown);
+        gameController.SetBulletAnimationLength(magicChargingCooldown);
 
     }
 
@@ -158,7 +159,7 @@ public class Character2DController : MonoBehaviour
 
     public void IncreaseHealth(int extraHealth)
     {
-        gameController.HealthUpPopUp(extraHealth);
+        gameController.MaxHealthUpPopUp(extraHealth);
         playerMaxHealth += extraHealth;
         hitpoints += extraHealth;
         healthBar.SetMaxHealth(playerMaxHealth);
@@ -188,6 +189,12 @@ public class Character2DController : MonoBehaviour
         gameController.MovementUp(speedBonus);
         movementSpeed += speedBonus;
         movementStats.text = Convert.ToString(movementSpeed);
+    }
+
+    public void IncreaseMagicRange(float bonusMagicRange)
+    {
+        gameController.MagicRangeUp(bonusMagicRange);
+        magicRange += bonusMagicRange;
     }
 
     private void SaveActions()
@@ -290,20 +297,23 @@ public class Character2DController : MonoBehaviour
             gameController.PlayLoadBulletAnimation();
             canShoot = false;
             // Create a bullet up, down or horizontal
-            ProjectileBehaviour bullet;
+            PlayerMagic bullet;
             if (lookingUp)
             {
-                bullet = Instantiate(projectilePrefab, upLaunchOffset.position, Quaternion.Inverse(transform.rotation));
+                bullet = Instantiate(magicPrefab, upLaunchOffset.position, Quaternion.Inverse(transform.rotation));
+                bullet.BulletRange = magicRange;
                 bullet.Up();
             }
             else if(lookingDown)
             {
-                bullet = Instantiate(projectilePrefab, downLaunchOffset.position, Quaternion.Inverse(transform.rotation));
+                bullet = Instantiate(magicPrefab, downLaunchOffset.position, Quaternion.Inverse(transform.rotation));
+                bullet.BulletRange = magicRange;
                 bullet.Down();
             }
             else
             {
-                bullet = Instantiate(projectilePrefab, horizontalLaunchOffset.position, Quaternion.Inverse(transform.rotation));
+                bullet = Instantiate(magicPrefab, horizontalLaunchOffset.position, Quaternion.Inverse(transform.rotation));
+                bullet.BulletRange = magicRange;
                 bullet.Horizontal();
             }
             bullet.SetDamage(damage);
@@ -330,14 +340,14 @@ public class Character2DController : MonoBehaviour
     {
         if (!canShoot)
         {
-            if (timeBulletCharging < bulletChargingCooldown)
+            if (timeMagicCharging < magicChargingCooldown)
             {
-                timeBulletCharging += Time.deltaTime;
+                timeMagicCharging += Time.deltaTime;
             }
             else
             {
                 canShoot = true;
-                timeBulletCharging = 0;
+                timeMagicCharging = 0;
             }
         }
     }

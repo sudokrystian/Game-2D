@@ -30399,6 +30399,11 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     audioSource: {fileID: 0}
+  - name: MagicRangeUp
+    clip: {fileID: 8300000, guid: f3eee4c984b8ebe479633a1ac33a6a88, type: 3}
+    volume: 1
+    pitch: 1
+    audioSource: {fileID: 0}
   defaultSpatialBlend: 1
   defaultMaxDistance: 15
 --- !u!4 &1660638394
@@ -35719,9 +35724,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 468236391}
     - target: {fileID: 6664676761881067939, guid: 0a7f2571f1ad063489be3175f256cdf8, type: 3}
+      propertyPath: magicRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664676761881067939, guid: 0a7f2571f1ad063489be3175f256cdf8, type: 3}
       propertyPath: magicStats
       value: 
       objectReference: {fileID: 1378435971}
+    - target: {fileID: 6664676761881067939, guid: 0a7f2571f1ad063489be3175f256cdf8, type: 3}
+      propertyPath: magicPrefab
+      value: 
+      objectReference: {fileID: 8614575778256108973, guid: dda76372cb078284f9ea69378c47d9e0, type: 3}
     - target: {fileID: 6664676761881067939, guid: 0a7f2571f1ad063489be3175f256cdf8, type: 3}
       propertyPath: animationClip
       value: 

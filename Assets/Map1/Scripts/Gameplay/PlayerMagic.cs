@@ -2,12 +2,14 @@ using System;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class ProjectileBehaviour : MonoBehaviour
+public class PlayerMagic : MonoBehaviour
 {
     // Stats
     private float bulletSpeed = 6f;
-    private int bulletDamage = 1;
-    [SerializeField] private float bulletRange = 7f;
+    // Assigned by player stats
+    private int bulletDamage;
+    private float bulletRange;
+    
     private bool up;
     private bool down;
     private bool horizontal;
@@ -74,6 +76,12 @@ public class ProjectileBehaviour : MonoBehaviour
     public void SetDamage(int dmg)
     {
         this.bulletDamage = dmg;
+    }
+    
+    public float BulletRange
+    {
+        get => bulletRange;
+        set => bulletRange = value;
     }
 
     public void Horizontal()

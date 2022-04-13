@@ -33,7 +33,7 @@ public class ArrowTrap : MonoBehaviour
 
             enemy.TakeHit(spikesDamage);
         }
-        var projectile = collision.collider.GetComponent<ProjectileBehaviour>();
+        var projectile = collision.collider.GetComponent<PlayerMagic>();
         if (projectile)
         {
             audioSource.Play();

@@ -5,7 +5,10 @@ using UnityEngine;
 public class BearTrap : MonoBehaviour
 {
     [SerializeField] private int bearTrapDamage = 3;
-    
+    // Collision info
+    private float timeColliding = 0;
+    // Time before damage is taken
+    private float timeCollidingThreshold = 1f;
     // Animations
     private Animator animator;
     private readonly int activateHash = Animator.StringToHash("Activate");
@@ -25,6 +28,32 @@ public class BearTrap : MonoBehaviour
             audioManager.PlaySoundEffect("BearTrap");
             animator.SetTrigger(activateHash);
             player.TakeHit(bearTrapDamage);
+        }
+        var enemy = collision.collider.GetComponent<EnemyStats>();
+        if (enemy)
+        {
+            audioManager.PlaySoundEffect("BearTrap");
+            animator.SetTrigger(activateHash);
+            enemy.TakeHit(bearTrapDamage);
+        }
+    }
+    
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        var player = collision.collider.GetComponent<Character2DController>();
+        if (player)
+        {
+            if (timeColliding < timeCollidingThreshold)
+            {
+                timeColliding += Time.deltaTime;
+            }
+            else
+            {
+                audioManager.PlaySoundEffect("BearTrap");
+                animator.SetTrigger(activateHash);
+                player.TakeHit(bearTrapDamage);
+                timeColliding = 0f;
+            }
         }
         var enemy = collision.collider.GetComponent<EnemyStats>();
         if (enemy)

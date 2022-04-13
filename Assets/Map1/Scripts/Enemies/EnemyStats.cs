@@ -20,7 +20,7 @@ public class EnemyStats : MonoBehaviour
     // Collision info
     private float timeColliding = 0;
     // Time before damage is taken
-    private float timeThreshold = 1f;
+    private float timeCollidingThreshold = 1f;
     // Drops
     public GameObject drop;
     [SerializeField] private float dropChance = 0.07f;
@@ -72,7 +72,7 @@ public class EnemyStats : MonoBehaviour
         var player = collision.collider.GetComponent<Character2DController>();
         if (player)
         {
-            if (timeColliding < timeThreshold)
+            if (timeColliding < timeCollidingThreshold)
             {
                 timeColliding += Time.deltaTime;
             }

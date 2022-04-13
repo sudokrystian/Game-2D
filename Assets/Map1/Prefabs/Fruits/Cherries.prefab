@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8747299877235761956}
   - component: {fileID: 1400899525674509383}
   - component: {fileID: 2150601996635640835}
-  - component: {fileID: 767718641577624710}
   - component: {fileID: -8604108558932417067}
+  - component: {fileID: 767718641577624710}
   m_Layer: 13
   m_Name: Cherries
   m_TagString: Untagged
@@ -121,19 +121,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &767718641577624710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8108562422423784745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 539a8a63414654a499e45c3e6f8d36d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recoverHealth: 1
 --- !u!50 &-8604108558932417067
 Rigidbody2D:
   serializedVersion: 4
@@ -155,3 +142,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &767718641577624710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8108562422423784745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539a8a63414654a499e45c3e6f8d36d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recoverHealth: 1

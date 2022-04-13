@@ -62,7 +62,7 @@ public class GameController : MonoBehaviour
         popUpWindow.ActivatePopUpWithTimer(health + " health recovered");
     }
     
-    public void HealthUpPopUp(int health) {
+    public void MaxHealthUpPopUp(int health) {
         audioManager.PlaySoundEffect("HealthUp");
         popUpWindow.ActivatePopUpWithTimer("Max HP increased by " + health + "!");
     }
@@ -77,6 +77,12 @@ public class GameController : MonoBehaviour
     {
         audioManager.PlaySoundEffect("SpeedUp");
         popUpWindow.ActivatePopUpWithTimer("Movement speed increased by " + movement + "!");
+    }
+    
+    public void MagicRangeUp(float magicRange)
+    {
+        audioManager.PlaySoundEffect("MagicRangeUp");
+        popUpWindow.ActivatePopUpWithTimer("Magic range increased by " + magicRange + "!");
     }
 
     public void SetBulletAnimationLength(float bulletChargingTime)

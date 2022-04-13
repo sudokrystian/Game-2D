@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5470794402865510398}
   - component: {fileID: -5927596759992551633}
   - component: {fileID: 8859508747066903293}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Poop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,4 +195,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 5043983239143076845}
-  projectileSpeed: 2
+  projectileSpeed: 1.5

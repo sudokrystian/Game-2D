@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6940467478680464984}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: MushroomContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5179752278552268983, guid: f00fb50d5a5ba8d4f8ebe122f69a9731, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5179752278552268989, guid: f00fb50d5a5ba8d4f8ebe122f69a9731, type: 3}

@@ -33,6 +33,10 @@ public class GameController : MonoBehaviour
         // Set up collisions rules
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Pick-ups"),LayerMask.NameToLayer("Bullets"), true);
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Pick-ups"),LayerMask.NameToLayer("Enemies"), true);
+        // Enable bullets through platforms
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("EnemyBullets"),LayerMask.NameToLayer("Platforms"), true);
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Platforms"),LayerMask.NameToLayer("EnemyBullets"), true);
+        
         // For now there is only one map so let's play the music
         PlayFirstMapTheme();
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1129481866891249365}
   - component: {fileID: 1129481866891249367}
   - component: {fileID: 1129481866891249366}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 1129481867225947845}
   - component: {fileID: 1129481867225947847}
   - component: {fileID: 1129481867225947846}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1129481867476988284}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: ProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 1129481867539891347}
   - component: {fileID: 1129481867539891349}
   - component: {fileID: 1129481867539891348}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: BirdGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 1129481867890296010}
   - component: {fileID: 1129481867890296011}
   - component: {fileID: 1129481866756610259}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 1129481868165642639}
   - component: {fileID: 1129481868165642638}
   - component: {fileID: 1129481868165642637}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 1129481868270867175}
   - component: {fileID: 1129481868270867174}
   - component: {fileID: 1129481868270867173}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: HealthBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 1129481868364267652}
   - component: {fileID: 7184175789616913849}
   - component: {fileID: 2015515467739167596}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: BlueBirdBomber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -705,12 +705,12 @@ MonoBehaviour:
   enemyGFX: {fileID: 1129481867539891347}
   bloodPrefab: {fileID: 4992315921776654168, guid: f963f39bfb7657047bfd7f07fadcaec5, type: 3}
   healthBar: {fileID: 1129481866756610259}
-  enemySpeed: 1
-  enemyMaxHealth: 5
-  enemyDamage: 1
+  enemySpeed: 1.3
+  enemyMaxHealth: 3
+  enemyDamage: 3
   jumpForce: 1
-  drop: {fileID: 8108562422423784745, guid: 1b9d5dd946a742e4e801f0e0d783ac1b, type: 3}
-  dropChance: 0.3
+  drop: {fileID: 4360387046326115415, guid: 1ec04af7203a3e64bbc428252a57c819, type: 3}
+  dropChance: 0.2
 --- !u!114 &7184175789616913849
 MonoBehaviour:
   m_ObjectHideFlags: 0

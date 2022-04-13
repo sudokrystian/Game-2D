@@ -20,7 +20,7 @@ public class EnemyStats : MonoBehaviour
     // Collision info
     private float timeColliding = 0;
     // Time before damage is taken
-    private float timeThreshold = 0.5f;
+    private float timeThreshold = 1f;
     // Drops
     public GameObject drop;
     [SerializeField] private float dropChance = 0.07f;

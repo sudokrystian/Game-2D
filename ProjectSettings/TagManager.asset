@@ -9,6 +9,7 @@ TagManager:
   - PlayerHitbox
   - GameWonScreen
   - GameWonText
+  - OneWayPlatform
   layers:
   - Default
   - TransparentFX
@@ -18,12 +19,12 @@ TagManager:
   - UI
   - Player
   - Obstacle
+  - Platforms
   - Enemies
+  - EnemyBullets
+  - 
   - Bullets
   - Pick-ups
-  - 
-  - 
-  - 
   - 
   - 
   - 

@@ -1,9 +1,8 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 
 public class Character2DController : MonoBehaviour
 
@@ -15,6 +14,7 @@ public class Character2DController : MonoBehaviour
 
     // Player body
     private Rigidbody2D rigidBody;
+    [SerializeField] private PolygonCollider2D playerCollider;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private ManaBar manaBar;
     [SerializeField] private GameObject playerGFX;
@@ -56,6 +56,9 @@ public class Character2DController : MonoBehaviour
     private bool manaCharged = false;
     private float timeManaCharging = 0;
     
+    // Current platform
+    private GameObject currentPlatform;
+    
     // Animations
     private Animator animator;
     private readonly int speedHash = Animator.StringToHash("Speed");
@@ -68,6 +71,7 @@ public class Character2DController : MonoBehaviour
         // Initialize values
         gameController = FindObjectOfType<GameController>();
         rigidBody = GetComponent<Rigidbody2D>();
+        playerCollider = GetComponent<PolygonCollider2D>();
         audioManager = FindObjectOfType<AudioManager>();
         animator = playerGFX.GetComponent<Animator>();
         healthBarStats = healthBar.GetComponentInChildren<TextMeshProUGUI>();
@@ -98,7 +102,23 @@ public class Character2DController : MonoBehaviour
     {
         PerformActions();
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Platforms"))
+        {
+            currentPlatform = collision.gameObject;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Platforms"))
+        {
+            currentPlatform = null;
+        }
+    }
+
     public void TakeHit(int damage)
     {
         // Update UI
@@ -236,12 +256,22 @@ public class Character2DController : MonoBehaviour
 
         }
         
+        // Rotate the character properly
         if (horizontalMove < 0)
         {
             transform.rotation = Quaternion.identity;
         } else if (horizontalMove > 0)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        
+        // Drop from the platform if standing on one
+        if (lookingDown)
+        {
+            if (currentPlatform != null)
+            {
+                StartCoroutine(DisableCollision());
+            }
         }
 
         if (jump)
@@ -339,5 +369,16 @@ public class Character2DController : MonoBehaviour
     private string GetManaStats()
     {
         return mana + " / " + playerMaxMana;
+    }
+
+    private IEnumerator DisableCollision()
+    {
+        TilemapCollider2D platformCollider = currentPlatform.GetComponent<TilemapCollider2D>();
+        if (platformCollider)
+        {
+            Physics2D.IgnoreCollision(playerCollider, platformCollider);
+            yield return new WaitForSeconds(0.25f);
+            Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
+        }
     }
 }

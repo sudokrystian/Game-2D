@@ -40,7 +40,6 @@ public class FlyingPatrol : MonoBehaviour
             // Get the direction and force to move
             var direction = (nextTarget - (Vector2) gameObject.transform.position).normalized;
             var force = direction * enemyStats.EnemySpeed * Time.deltaTime;
-            float distanceFromTarget = Vector2.Distance(gameObject.transform.position, nextTarget);
             enemyStats.RigidBody.AddForce(force);
         }
     }

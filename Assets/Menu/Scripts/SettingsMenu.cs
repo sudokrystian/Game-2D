@@ -19,7 +19,6 @@ public class SettingsMenu : MonoBehaviour
     
     public void MusicVolume(float volume)
     {
-        print("Adjust music volume to " + volume);
         audioManager.PlaySoundEffect("AdjustSlider");
         PlayerPrefs.SetFloat("FroggersMusic", volume);
         PlayerPrefs.Save();

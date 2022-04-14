@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4655285178094836863}
   - component: {fileID: 8591683858631095667}
   - component: {fileID: 8614575778256108973}
+  - component: {fileID: 2441870153651281184}
   m_Layer: 12
   m_Name: Kamehada
   m_TagString: Untagged
@@ -135,3 +136,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedBullet: {fileID: 5818968732698649101, guid: 26b4bb41d5606e2449dd02377bc68924, type: 3}
+--- !u!95 &2441870153651281184
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707158364923249217}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f6dbc86c562b66947bef49bbc00087a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

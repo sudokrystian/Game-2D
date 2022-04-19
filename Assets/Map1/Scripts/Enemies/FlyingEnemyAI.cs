@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class FlyingEnemyAI : EnemyAI
 {
-    public override void EnemyPathfinding()
+    public override void MoveTowardsTheTarget()
     {
-        // Get the direction and force to move
-        var direction = ((Vector2) path.vectorPath[currentWaypoint] - (Vector2) enemyStats.RigidBody.position)
-            .normalized;
-        var force = direction * enemyStats.EnemySpeed * Time.deltaTime;
         // Move the enemy if he is in range
         float distanceFromPlayer = Vector2.Distance(enemyStats.RigidBody.position, target.position);
         if (distanceFromPlayer < visionRange)
         {
+            // Get the direction and force to move
+            var direction = ((Vector2) path.vectorPath[currentWaypoint] - (Vector2) enemyStats.RigidBody.position)
+                .normalized;
+            var force = direction * enemyStats.EnemySpeed * Time.deltaTime;
             agitated = true;
             enemyStats.RigidBody.AddForce(force);
         }

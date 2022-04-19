@@ -1,10 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
-using Random = UnityEngine.Random;
-
 
 public class EnemyAI : MonoBehaviour
 {
@@ -23,6 +19,7 @@ public class EnemyAI : MonoBehaviour
     protected Transform target;
     [SerializeField] protected float nextWaypointDistance = 1f;
 
+    // Pathfinding variables
     protected Path path;
     protected int currentWaypoint = 0;
     protected bool reachedEndOfPath = false;
@@ -57,11 +54,11 @@ public class EnemyAI : MonoBehaviour
             reachedEndOfPath = false;
         }
         
-        EnemyPathfinding();
+        MoveTowardsTheTarget();
     }
 
     // Overwrite in the inherited classes
-    public virtual void EnemyPathfinding()
+    public virtual void MoveTowardsTheTarget()
     {
         throw new NotImplementedException();
     }

@@ -29,7 +29,6 @@ public class Lava : MonoBehaviour
         var enemy = collision.collider.GetComponent<EnemyStats>();
         if (enemy)
         {
-
             enemy.TakeHit(lavaDamage);
         }
     }

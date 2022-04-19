@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundedPatrol : MonoBehaviour
+public class AggresiveGroundedPatrol : MonoBehaviour
 {
     [SerializeField] private float patrollingRange;
     private Vector2 startingPosition;

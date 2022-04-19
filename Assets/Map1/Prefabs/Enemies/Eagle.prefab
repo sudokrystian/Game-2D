@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 8630469704286404355}
   - component: {fileID: 8630469704286404364}
   - component: {fileID: 8630469704286404365}
-  - component: {fileID: 5620820908048742123}
+  - component: {fileID: -2058131246666583639}
   - component: {fileID: 5620820908048742122}
   - component: {fileID: -8423057730881707715}
   m_Layer: 9
@@ -377,7 +377,7 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &5620820908048742123
+--- !u!114 &-2058131246666583639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -386,12 +386,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8630469704286404367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaddd9e728ee5c340be45c242e843f30, type: 3}
+  m_Script: {fileID: 11500000, guid: 994c6a1ab93d15e4398ddeb48e139b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 5620820908048742122}
   visionRange: 8
-  canFly: 1
   nextWaypointDistance: 0.5
 --- !u!114 &5620820908048742122
 MonoBehaviour:
@@ -428,7 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrollingRange: 2.2
   enemyStats: {fileID: 5620820908048742122}
-  enemyAI: {fileID: 5620820908048742123}
+  enemyAI: {fileID: -2058131246666583639}
 --- !u!1 &8630469704942584948
 GameObject:
   m_ObjectHideFlags: 0

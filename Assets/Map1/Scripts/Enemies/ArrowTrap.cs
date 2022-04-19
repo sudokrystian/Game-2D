@@ -30,7 +30,6 @@ public class ArrowTrap : MonoBehaviour
         var enemy = collision.collider.GetComponent<EnemyStats>();
         if (enemy)
         {
-
             enemy.TakeHit(spikesDamage);
         }
         var projectile = collision.collider.GetComponent<PlayerMagic>();

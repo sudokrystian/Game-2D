@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 4372642804952015035}
   - component: {fileID: 8102448590866702204}
   - component: {fileID: 8102448590866702146}
-  - component: {fileID: 2592507581641207064}
+  - component: {fileID: 775126435766160048}
   - component: {fileID: 2592507581641207065}
   - component: {fileID: 5663192961810498747}
   - component: {fileID: 5958403899825890751}
@@ -343,7 +343,7 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &2592507581641207064
+--- !u!114 &775126435766160048
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -352,12 +352,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8102448590866702144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaddd9e728ee5c340be45c242e843f30, type: 3}
+  m_Script: {fileID: 11500000, guid: 046853a8b94ef934eb9bb2b54b405497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 2592507581641207065}
   visionRange: 10
-  canFly: 0
   nextWaypointDistance: 1
 --- !u!114 &2592507581641207065
 MonoBehaviour:
@@ -377,7 +376,7 @@ MonoBehaviour:
   enemySpeed: 380
   enemyMaxHealth: 7
   enemyDamage: 3
-  jumpForce: 4
+  jumpForce: 4.5
   drop: {fileID: 8106377224569329082, guid: 23fc78cb7bdf3a743820ec7a3aa296da, type: 3}
   dropChance: 0.7
 --- !u!114 &5663192961810498747
@@ -408,7 +407,7 @@ MonoBehaviour:
   patrollingRange: 0.4
   timeWaitingThreshold: 1
   enemyStats: {fileID: 2592507581641207065}
-  enemyAI: {fileID: 2592507581641207064}
+  enemyAI: {fileID: 775126435766160048}
 --- !u!1 &8102448590973540419
 GameObject:
   m_ObjectHideFlags: 0

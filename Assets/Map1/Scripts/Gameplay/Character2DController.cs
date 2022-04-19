@@ -205,7 +205,7 @@ public class Character2DController : MonoBehaviour
         if (verticalAxis > 0)
         {
             lookingUp = true;
-            lookingDown = true;
+            lookingDown = false;
         }
         else if (verticalAxis < 0)
         {

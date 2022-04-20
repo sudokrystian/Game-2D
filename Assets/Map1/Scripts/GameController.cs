@@ -73,6 +73,12 @@ public class GameController : MonoBehaviour
         audioManager.PlaySoundEffect("Healing");
         popUpWindow.ActivatePopUpWithTimer(health + " health recovered");
     }
+
+    public void HealthIsFullPopUp()
+    {
+        audioManager.PlaySoundEffect("Healing");
+        popUpWindow.ActivatePopUpWithTimer("Health is full!");
+    }
     
     public void MaxHealthUpPopUp(int health) {
         audioManager.PlaySoundEffect("HealthUp");
@@ -115,7 +121,7 @@ public class GameController : MonoBehaviour
 
     public float GetCameraSize()
     {
-        return PlayerPrefs.GetFloat("FroggersCameraSize");
+        return PlayerPrefs.GetFloat(playerPrefsCameraSizeKey);
     }
 
     public void SetCameraSize(float size)

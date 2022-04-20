@@ -143,6 +143,7 @@ public class Character2DController : MonoBehaviour
         {
             if ((hitpoints + extraHealth) > playerMaxHealth)
             {
+                gameController.HealthIsFullPopUp();
                 hitpoints = playerMaxHealth;
                 healthBar.SetHealth(hitpoints);
                 healthBarStats.text = GetHealthStats();
@@ -154,6 +155,10 @@ public class Character2DController : MonoBehaviour
                 healthBar.SetHealth(hitpoints);
                 healthBarStats.text = GetHealthStats();
             }
+        }
+        else
+        {
+            gameController.HealthIsFullPopUp();
         }
     }
 

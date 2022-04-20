@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PauseOptionsMenu : MonoBehaviour
 {
+    private GameController gameController;
     private AudioManager audioManager;
     public Slider musicSlider;
     public Slider soundEffectsSlider;
@@ -13,33 +14,30 @@ public class PauseOptionsMenu : MonoBehaviour
 
     private void Start()
     {
+        gameController = FindObjectOfType<GameController>();
         audioManager = FindObjectOfType<AudioManager>();
-        musicSlider.value = PlayerPrefs.GetFloat("FroggersMusic");
-        soundEffectsSlider.value = PlayerPrefs.GetFloat("FroggersSoundEffects");
-        zoomOutSlider.value = PlayerPrefs.GetFloat("CameraSize");
+        musicSlider.value = audioManager.GetMusicVolume();
+        soundEffectsSlider.value = audioManager.GetSoundEffectsVolume();
+        zoomOutSlider.value = gameController.GetCameraSize();
     }
     
     public void MusicVolume(float volume)
     {
         audioManager.PlaySoundEffect("AdjustSlider");
-        PlayerPrefs.SetFloat("FroggersMusic", volume);
-        PlayerPrefs.Save();
+        audioManager.SetMusicVolume(volume);
         audioManager.UpdateMusicVolume();
     }
 
     public void SoundEffectsVolume(float volume)
     {
         audioManager.PlaySoundEffect("AdjustSlider");
-        PlayerPrefs.SetFloat("FroggersSoundEffects", volume);
-        PlayerPrefs.Save();
+        audioManager.SetSoundEffectsVolume(volume);
         audioManager.UpdateSoundEffectsVolume();
     }
 
     public void CameraSize(float size)
     {
         audioManager.PlaySoundEffect("AdjustSlider");
-        PlayerPrefs.SetFloat("CameraSize", size);
-        PlayerPrefs.Save();
-        Camera.main.orthographicSize = size;
+        gameController.SetCameraSize(size);
     }
 }

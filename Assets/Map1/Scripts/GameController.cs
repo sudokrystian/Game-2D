@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private float mainCameraYOffset = 1.3f;
     
     private Camera mainCamera;
+    private string playerPrefsCameraSizeKey = "FroggersCameraSize";
     
     // UI animations
     public Animator loadBulletAnimator;
@@ -40,6 +41,16 @@ public class GameController : MonoBehaviour
         
         // For now there is only one map so let's play the music
         PlayFirstMapTheme();
+        // Adjust camera size
+        if (IsCameraSizeSaved())
+        {
+            SetCameraSize(GetCameraSize());
+        }
+        else
+        {
+            // If not saved set it to the default value
+            SetCameraSize(6.3f);
+        }
     }
     
     private void FixedUpdate()
@@ -100,6 +111,23 @@ public class GameController : MonoBehaviour
     public void PlayFirstMapTheme()
     {
         audioManager.PlayMusic("Map1Forest");
+    }
+
+    public float GetCameraSize()
+    {
+        return PlayerPrefs.GetFloat("FroggersCameraSize");
+    }
+
+    public void SetCameraSize(float size)
+    {
+        PlayerPrefs.SetFloat(playerPrefsCameraSizeKey, size);
+        PlayerPrefs.Save();
+        mainCamera.orthographicSize = size;
+    }
+    
+    private bool IsCameraSizeSaved()
+    {
+        return PlayerPrefs.HasKey(playerPrefsCameraSizeKey);
     }
 
 }

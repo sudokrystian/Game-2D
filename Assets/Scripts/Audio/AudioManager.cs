@@ -14,13 +14,17 @@ public class AudioManager : MonoBehaviour
     // Values for sounds attached to the game objects
     [SerializeField] private float defaultSpatialBlend = 1f;
     [SerializeField] private float defaultMaxDistance = 15;
+
+    private string playerPrefsSoundsEffectKey = "FroggersSoundEffects";
+    private string playerPrefsMusicKey = "FroggersMusic";
+    
     
     void Awake()
     {
         gameObjectsAudioSources = new HashSet<AudioSource>();
         
-        var soundEffectsVolume = PlayerPrefs.GetFloat("FroggersSoundEffects");
-        var musicVolume = PlayerPrefs.GetFloat("FroggersMusic");
+        float soundEffectsVolume = GetSoundEffectsVolume();
+        float musicVolume = GetMusicVolume();
 
         foreach (Sound sound in music)
         {
@@ -64,7 +68,7 @@ public class AudioManager : MonoBehaviour
     
     public void UpdateSoundEffectsVolume()
     {
-        var soundEffectsVolume = PlayerPrefs.GetFloat("FroggersSoundEffects");
+        float soundEffectsVolume = GetSoundEffectsVolume();
         foreach (Sound sound in soundEffects)
         {
             sound.volume = soundEffectsVolume;
@@ -76,7 +80,7 @@ public class AudioManager : MonoBehaviour
 
     private void UpdateGameObjectsSoundEffectsVolume()
     {
-        var soundEffectsVolume = PlayerPrefs.GetFloat("FroggersMusic");
+        float soundEffectsVolume = GetSoundEffectsVolume();
         foreach (AudioSource audioSource in gameObjectsAudioSources)
         {
             audioSource.volume = soundEffectsVolume;
@@ -85,7 +89,7 @@ public class AudioManager : MonoBehaviour
 
     public void UpdateMusicVolume()
     {
-        var musicVolume = PlayerPrefs.GetFloat("FroggersMusic");
+        float musicVolume = GetMusicVolume();
         foreach (Sound sound in music)
         {
             sound.volume = musicVolume;
@@ -109,5 +113,37 @@ public class AudioManager : MonoBehaviour
     public void DetachAudioSource(AudioSource audioSource)
     {
         gameObjectsAudioSources.Remove(audioSource);
+    }
+
+    public float GetMusicVolume()
+    {
+        return PlayerPrefs.GetFloat(playerPrefsMusicKey);
+    }
+
+    public float GetSoundEffectsVolume()
+    {
+        return PlayerPrefs.GetFloat(playerPrefsSoundsEffectKey);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        PlayerPrefs.SetFloat(playerPrefsMusicKey, volume);
+        PlayerPrefs.Save();
+    }
+
+    public void SetSoundEffectsVolume(float volume)
+    {
+        PlayerPrefs.SetFloat(playerPrefsSoundsEffectKey, volume);
+        PlayerPrefs.Save();
+    }
+
+    public bool IsMusicVolumeSaved()
+    {
+        return PlayerPrefs.HasKey(playerPrefsMusicKey);
+    }
+
+    public bool IsSoundEffectsVolumeSaved()
+    {
+        return PlayerPrefs.HasKey(playerPrefsSoundsEffectKey);
     }
 }

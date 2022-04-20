@@ -13,23 +13,21 @@ public class SettingsMenu : MonoBehaviour
     private void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
-        musicSlider.value = PlayerPrefs.GetFloat("FroggersMusic");
-        soundEffectsSlider.value = PlayerPrefs.GetFloat("FroggersSoundEffects");
+        musicSlider.value = audioManager.GetMusicVolume();
+        soundEffectsSlider.value = audioManager.GetSoundEffectsVolume();
     }
     
     public void MusicVolume(float volume)
     {
         audioManager.PlaySoundEffect("AdjustSlider");
-        PlayerPrefs.SetFloat("FroggersMusic", volume);
-        PlayerPrefs.Save();
+        audioManager.SetMusicVolume(volume);
         audioManager.UpdateMusicVolume();
     }
 
     public void SoundEffectsVolume(float volume)
     {
         audioManager.PlaySoundEffect("AdjustSlider");
-        PlayerPrefs.SetFloat("FroggersSoundEffects", volume);
-        PlayerPrefs.Save();
+        audioManager.SetSoundEffectsVolume(volume);
         audioManager.UpdateSoundEffectsVolume();
     }
 

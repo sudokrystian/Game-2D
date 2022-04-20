@@ -9,19 +9,20 @@ public class MainMenu : MonoBehaviour
     private AudioManager audioManager;
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         // Check if any sound setting have been ever saved
-        var soundEffectsVolume = PlayerPrefs.HasKey("FroggersSoundEffects");
-        var musicVolume = PlayerPrefs.HasKey("FroggersMusic");
+        bool soundEffectsVolume = audioManager.IsSoundEffectsVolumeSaved();
+        var musicVolume = audioManager.IsMusicVolumeSaved();
+        // If not set them to max
         if (!soundEffectsVolume)
         {
-            PlayerPrefs.SetFloat("FroggersSoundEffects", 1);
+            audioManager.SetSoundEffectsVolume(1);
         }
 
         if (!musicVolume)
         {
-            PlayerPrefs.SetFloat("FroggersMusic", 1);
+            audioManager.SetMusicVolume(1);
         }
-        audioManager = FindObjectOfType<AudioManager>();
         audioManager.PlayMusic("MenuTheme");
         audioManager.UpdateMusicVolume();
         audioManager.UpdateSoundEffectsVolume();

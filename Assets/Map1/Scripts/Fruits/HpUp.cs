@@ -7,12 +7,7 @@ public class HpUp : Fruit
 {
     [SerializeField] private int extraHealth = 1;
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        PerformActionOnCollision(col, extraHealth);
-    }
-
-    public override void Action(Character2DController player, float actionValue)
+    public override void Action(Character2DController player)
     {
         player.IncreaseHealth(extraHealth);
     }

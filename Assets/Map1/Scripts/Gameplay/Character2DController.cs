@@ -282,7 +282,7 @@ public class Character2DController : MonoBehaviour
         {
             if (currentPlatform != null)
             {
-                StartCoroutine(DisableCollision());
+                StartCoroutine(DisablePlatformCollision());
             }
         }
 
@@ -386,7 +386,7 @@ public class Character2DController : MonoBehaviour
         return mana + " / " + playerMaxMana;
     }
 
-    private IEnumerator DisableCollision()
+    private IEnumerator DisablePlatformCollision()
     {
         TilemapCollider2D platformCollider = currentPlatform.GetComponent<TilemapCollider2D>();
         if (platformCollider)
